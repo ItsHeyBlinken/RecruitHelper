@@ -102,3 +102,43 @@ GROUP BY sch.school_name, sch.division
 HAVING COUNT(*) > 12
 ORDER BY contact_count DESC;
 ```
+
+## Generic / department emails (not coach emails)
+
+Site-wide addresses like `tickets@`, `info@`, `athletics@` should be cleared. Re-scrape after the scraper generic-email filter is deployed.
+
+```sql
+-- Preview rows to clear
+SELECT sch.school_name, c.coach_name, c.title, c.email
+FROM contacts c
+JOIN sports sp ON sp.id = c.sport_id
+JOIN schools sch ON sch.id = sp.school_id
+WHERE sp.sport_name = 'softball'
+  AND c.email IS NOT NULL
+  AND LOWER(SPLIT_PART(c.email, '@', 1)) IN (
+    'tickets', 'ticket', 'ticketing', 'hr', 'info', 'athletics',
+    'communications', 'communication', 'marketing', 'media',
+    'compliance', 'facilities', 'admin', 'administration',
+    'sportsinfo', 'sportinfo', 'noreply', 'donotreply', 'webmaster',
+    'support', 'help', 'contact', 'general', 'office', 'reception',
+    'sponsorship', 'sales', 'booking', 'events', 'groups', 'group'
+  )
+ORDER BY sch.school_name, c.coach_name;
+
+-- Clear generic emails (run after preview)
+UPDATE contacts c
+SET email = NULL, updated_at = NOW()
+FROM sports sp, schools sch
+WHERE c.sport_id = sp.id
+  AND sp.school_id = sch.id
+  AND sp.sport_name = 'softball'
+  AND c.email IS NOT NULL
+  AND LOWER(SPLIT_PART(c.email, '@', 1)) IN (
+    'tickets', 'ticket', 'ticketing', 'hr', 'info', 'athletics',
+    'communications', 'communication', 'marketing', 'media',
+    'compliance', 'facilities', 'admin', 'administration',
+    'sportsinfo', 'sportinfo', 'noreply', 'donotreply', 'webmaster',
+    'support', 'help', 'contact', 'general', 'office', 'reception',
+    'sponsorship', 'sales', 'booking', 'events', 'groups', 'group'
+  );
+```

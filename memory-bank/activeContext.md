@@ -72,3 +72,4 @@
 - 2026-07-02: Added `Texas_D2_Softball_URL_Verification.md` in project root for manual D2 URL verification checklist
 - 2026-07-02: Added `NAIA_Texas_Softball_URL_Verification.md` at project root — 7/9 NAIA URLs confirmed, Jarvis + Texas College need replacement
 - 2026-07-03: Consolidated all 5 division URL verification reports into `Texas_Softball_URL_Verification_Master.md` — single actionable checklist for 93 TX schools (21 URL fixes, 3 removals, scrape workflow)
+- 2026-07-03: Fixed UT bogus `tickets@athletics.utexas.edu` on all coaches — added `scraper/src/generic-email.ts` blocklist; scraper now returns null email when only site-wide addresses found; current UT staff do not publish individual emails on texassports.com

@@ -10,6 +10,7 @@ import { isStaffDirectoryUrl } from "./parsers/types.js";
 import { namesMatch } from "./contact-utils.js";
 import { isSoftballCoachingContact } from "./softball-filter.js";
 import { revealCloudflareEmailsInHtml, decodeCloudflareEmail } from "./email-decode.js";
+import { isGenericAthleticsEmail, rejectGenericEmail } from "./generic-email.js";
 import { logger } from "./logger.js";
 
 const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/;
@@ -25,8 +26,32 @@ function extractLabeledField(bodyText: string, label: string): string | null {
 function extractEmailFromText(text: string): string | null {
   const matches = text.match(EMAIL_REGEX_GLOBAL);
   if (!matches) return null;
-  const edu = matches.find((e) => e.toLowerCase().includes(".edu"));
-  return (edu ?? matches[0]).toLowerCase();
+  const personal = matches.filter((email) => !isGenericAthleticsEmail(email));
+  const edu = personal.find((e) => e.toLowerCase().includes(".edu"));
+  return rejectGenericEmail(edu ?? personal[0] ?? null);
+}
+
+function collectMailtoEmails($: ReturnType<typeof loadCheerio>): string[] {
+  const emails: string[] = [];
+
+  $('a[href^="mailto:"]').each((_, el) => {
+    const email = $(el)
+      .attr("href")
+      ?.replace("mailto:", "")
+      .split("?")[0]
+      ?.toLowerCase();
+    if (email && EMAIL_REGEX.test(email)) emails.push(email);
+  });
+
+  return emails;
+}
+
+function pickPersonalEmail(...candidates: Array<string | null | undefined>): string | null {
+  for (const candidate of candidates) {
+    const email = rejectGenericEmail(candidate ?? null);
+    if (email && EMAIL_REGEX.test(email)) return email;
+  }
+  return null;
 }
 
 export function discoverStaffProfileLinks(html: string, pageUrl: string): string[] {
@@ -203,12 +228,14 @@ export function parseStaffProfilePage(html: string, pageUrl?: string): ScrapedCo
 
   const decoded = $("[data-decoded-email]").first().attr("data-decoded-email");
   const cfHex = $("[data-cfemail]").first().attr("data-cfemail");
-  const mailto = $('a[href^="mailto:"]').first().attr("href");
-  let email =
-    decoded?.toLowerCase() ??
-    (cfHex ? decodeCloudflareEmail(cfHex) : null) ??
-    mailto?.replace("mailto:", "").split("?")[0]?.toLowerCase() ??
-    null;
+  const bioEmail = extractBioFieldValue($, "email");
+  const mailtoEmails = collectMailtoEmails($);
+  let email = pickPersonalEmail(
+    decoded,
+    cfHex ? decodeCloudflareEmail(cfHex) : null,
+    bioEmail,
+    ...mailtoEmails,
+  );
 
   const name = extractProfileName($, pageUrl, html);
 
@@ -237,15 +264,8 @@ export function parseStaffProfilePage(html: string, pageUrl?: string): ScrapedCo
   }
 
   if (!email) {
-    const bioEmail = extractBioFieldValue($, "email");
-    if (bioEmail && EMAIL_REGEX.test(bioEmail)) {
-      email = bioEmail.toLowerCase();
-    }
-  }
-
-  if (!email) {
     const emailMatch = bodyText.match(/Email\s*:?\s*([a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})/i);
-    if (emailMatch) email = emailMatch[1].toLowerCase();
+    if (emailMatch) email = rejectGenericEmail(emailMatch[1]);
     if (!email) email = extractEmailFromText(bodyText);
   }
 

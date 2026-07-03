@@ -1,5 +1,6 @@
 import type { ScrapedContact } from "./types.js";
 import { filterSoftballCoachingContacts } from "./softball-filter.js";
+import { isGenericAthleticsEmail } from "./generic-email.js";
 
 const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const PHONE_REGEX = /(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
@@ -98,13 +99,14 @@ export function cleanEmail(raw: string | null): string | null {
   });
 
   scored.sort((a, b) => b.score - a.score);
-  const best = scored[0];
+  const best = scored.find((entry) => !isGenericAthleticsEmail(entry.email)) ?? scored[0];
   if (!best || best.score < -40) {
     const buried = raw.match(/([a-z][a-z0-9]{2,24}@(?:[a-z0-9-]+\.)+[a-z]{2,})$/i);
-    return buried ? buried[1].toLowerCase() : null;
+    const buriedEmail = buried ? buried[1].toLowerCase() : null;
+    return isGenericAthleticsEmail(buriedEmail) ? null : buriedEmail;
   }
 
-  return best.email;
+  return isGenericAthleticsEmail(best.email) ? null : best.email;
 }
 
 function escapeRegExp(value: string): string {
