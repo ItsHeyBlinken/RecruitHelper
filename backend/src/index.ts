@@ -11,9 +11,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: resolve(__dirname, "../../.env") });
 
 const app = express();
-const PORT = Number(process.env.PORT) || 3001;
 const isProduction = process.env.NODE_ENV === "production";
 const frontendDist = resolve(__dirname, "../../frontend/dist");
+
+function resolvePort(): number {
+  const fromEnv = Number(process.env.PORT);
+  if (process.env.PORT && Number.isFinite(fromEnv) && fromEnv > 0) {
+    return fromEnv;
+  }
+  return isProduction ? 80 : 3001;
+}
+
+const PORT = resolvePort();
 
 app.use(cors());
 app.use(express.json());
