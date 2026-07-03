@@ -1,0 +1,449 @@
+[
+  {
+    "name": "Angelo State University",
+    "requestedUrl": "https://angelosports.com",
+    "status": 200,
+    "finalUrl": "https://angelosports.com/splash.aspx?id=splash_322",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": false,
+    "schoolMatch": true,
+    "staffLinks": [],
+    "probedUrl": "https://angelosports.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://angelosports.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "travis.scott@angelo.edu",
+          "katie.scott@angelo.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "travis.scott@angelo.edu",
+      "katie.scott@angelo.edu"
+    ],
+    "emailCount": 2,
+    "verdict": "GOOD",
+    "reason": "2 email(s) found"
+  },
+  {
+    "name": "Lubbock Christian University",
+    "requestedUrl": "https://lcuchaps.com",
+    "status": 200,
+    "finalUrl": "https://lcuchaps.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://lcuchaps.com/sports/softball/roster",
+      "https://lcuchaps.com/staff-directory"
+    ],
+    "probedUrl": null,
+    "probed": [],
+    "emails": [
+      "chris.due@lcu.edu",
+      "everett.corder@lcu.edu"
+    ],
+    "emailCount": 2,
+    "verdict": "GOOD",
+    "reason": "2 email(s) found"
+  },
+  {
+    "name": "Midwestern State University",
+    "requestedUrl": "https://msumustangs.com",
+    "status": 200,
+    "finalUrl": "https://msumustangs.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://msumustangs.com/sports/softball/roster",
+      "https://msumustangs.com/staff-directory"
+    ],
+    "probedUrl": "https://msumustangs.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://msumustangs.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://msumustangs.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://msumustangs.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "kaelani.bryan@msutexas.edu",
+          "katelynn.taylor@msutexas.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "kaelani.bryan@msutexas.edu",
+      "katelynn.taylor@msutexas.edu"
+    ],
+    "emailCount": 2,
+    "verdict": "GOOD",
+    "reason": "2 email(s) found"
+  },
+  {
+    "name": "St. Edward's University",
+    "requestedUrl": "https://gohilltoppers.com",
+    "status": 200,
+    "finalUrl": "https://gohilltoppers.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://gohilltoppers.com/sports/softball/roster",
+      "https://gohilltoppers.com/staff-directory"
+    ],
+    "probedUrl": "https://gohilltoppers.com/staff-directory",
+    "probed": [
+      {
+        "url": "https://gohilltoppers.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://gohilltoppers.com/staff-directory",
+        "status": 200,
+        "emails": [
+          "athletics@stedwards.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "athletics@stedwards.edu"
+    ],
+    "emailCount": 1,
+    "verdict": "GOOD",
+    "reason": "1 email(s) found"
+  },
+  {
+    "name": "St. Mary's University",
+    "requestedUrl": "https://rattlerathletics.com",
+    "status": 200,
+    "finalUrl": "https://rattlerathletics.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://rattlerathletics.com/sports/softball/roster",
+      "https://rattlerathletics.com/staff-directory"
+    ],
+    "probedUrl": "https://rattlerathletics.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://rattlerathletics.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://rattlerathletics.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://rattlerathletics.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "tlira@stmarytx.edu",
+          "cgicante@stmarytx.edu",
+          "khirlas@mail.stmarytx.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "tlira@stmarytx.edu",
+      "cgicante@stmarytx.edu",
+      "khirlas@mail.stmarytx.edu"
+    ],
+    "emailCount": 3,
+    "verdict": "GOOD",
+    "reason": "3 email(s) found"
+  },
+  {
+    "name": "Texas A&M International University",
+    "requestedUrl": "https://godustdevils.com",
+    "status": 200,
+    "finalUrl": "https://godustdevils.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://godustdevils.com/sports/softball/roster",
+      "https://godustdevils.com/staff-directory"
+    ],
+    "probedUrl": "https://godustdevils.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://godustdevils.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://godustdevils.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://godustdevils.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "scott.libby@tamiu.edu",
+          "anthony.saldivar@tamiu.edu",
+          "melanie.gamboa@tamiu.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "scott.libby@tamiu.edu",
+      "anthony.saldivar@tamiu.edu",
+      "melanie.gamboa@tamiu.edu"
+    ],
+    "emailCount": 3,
+    "verdict": "GOOD",
+    "reason": "3 email(s) found"
+  },
+  {
+    "name": "Texas A&M University-Kingsville",
+    "requestedUrl": "https://javelinaathletics.com",
+    "status": 200,
+    "finalUrl": "https://javelinaathletics.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://javelinaathletics.com/sports/softball/roster",
+      "https://javelinaathletics.com/staff-directory"
+    ],
+    "probedUrl": "https://javelinaathletics.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://javelinaathletics.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://javelinaathletics.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://javelinaathletics.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "orlando.salinas@tamuk.edu",
+          "cornelius.gallegos@tamuk.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "orlando.salinas@tamuk.edu",
+      "cornelius.gallegos@tamuk.edu"
+    ],
+    "emailCount": 2,
+    "verdict": "GOOD",
+    "reason": "2 email(s) found"
+  },
+  {
+    "name": "Texas Woman's University",
+    "requestedUrl": "https://twuathletics.com",
+    "status": 200,
+    "finalUrl": "https://twuathletics.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": false,
+    "staffLinks": [
+      "https://twuathletics.com/sports/softball/roster",
+      "https://twuathletics.com/staff-directory"
+    ],
+    "probedUrl": "https://twuathletics.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://twuathletics.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://twuathletics.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://twuathletics.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "rmcnutt@twu.edu",
+          "mrobinson28@twu.edu",
+          "khill32@twu.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "rmcnutt@twu.edu",
+      "mrobinson28@twu.edu",
+      "khill32@twu.edu"
+    ],
+    "emailCount": 3,
+    "verdict": "GOOD",
+    "reason": "3 email(s) found"
+  },
+  {
+    "name": "University of Texas Permian Basin",
+    "requestedUrl": "https://utpbbasinguns.com",
+    "status": 0,
+    "finalUrl": "https://utpbbasinguns.com",
+    "error": "fetch failed",
+    "platform": "Other/Unknown",
+    "softballOnPage": false,
+    "schoolMatch": false,
+    "staffLinks": [],
+    "probedUrl": null,
+    "probed": [],
+    "emails": [],
+    "emailCount": 0,
+    "verdict": "FAIL",
+    "reason": "HTTP error: fetch failed"
+  },
+  {
+    "name": "University of Texas at Dallas",
+    "requestedUrl": "https://utdcomets.com",
+    "status": 200,
+    "finalUrl": "https://utdcomets.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://utdcomets.com/sports/softball/roster"
+    ],
+    "probedUrl": "https://utdcomets.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://utdcomets.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://utdcomets.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "casey.dickson@utdallas.edu",
+          "jami.clinton@utdallas.edu",
+          "jacob.woolley@utdallas.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "casey.dickson@utdallas.edu",
+      "jami.clinton@utdallas.edu",
+      "jacob.woolley@utdallas.edu"
+    ],
+    "emailCount": 3,
+    "verdict": "GOOD",
+    "reason": "3 email(s) found"
+  },
+  {
+    "name": "University of Texas at Tyler",
+    "requestedUrl": "https://uttylerpatriots.com",
+    "status": 200,
+    "finalUrl": "https://uttylerpatriots.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://uttylerpatriots.com/sports/softball/roster",
+      "https://uttylerpatriots.com/staff-directory"
+    ],
+    "probedUrl": "https://uttylerpatriots.com/sports/softball/roster",
+    "probed": [
+      {
+        "url": "https://uttylerpatriots.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://uttylerpatriots.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://uttylerpatriots.com/sports/softball/coaches",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://uttylerpatriots.com/index.aspx",
+        "status": 200,
+        "emails": []
+      }
+    ],
+    "emails": [],
+    "emailCount": 0,
+    "verdict": "GOOD",
+    "reason": "Sidearm + staff/coach link(s) found"
+  },
+  {
+    "name": "West Texas A&M University",
+    "requestedUrl": "https://gobuffsgo.com",
+    "status": 200,
+    "finalUrl": "https://gobuffsgo.com/",
+    "error": null,
+    "platform": "Sidearm",
+    "softballOnPage": true,
+    "schoolMatch": true,
+    "staffLinks": [
+      "https://gobuffsgo.com/sports/softball/roster",
+      "https://gobuffsgo.com/staff-directory",
+      "https://gobuffsgo.com/staff-directory?path=general"
+    ],
+    "probedUrl": "https://gobuffsgo.com/sports/softball/coaches",
+    "probed": [
+      {
+        "url": "https://gobuffsgo.com/sports/softball/roster",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://gobuffsgo.com/staff-directory",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://gobuffsgo.com/staff-directory?path=general",
+        "status": 200,
+        "emails": []
+      },
+      {
+        "url": "https://gobuffsgo.com/sports/softball/coaches",
+        "status": 200,
+        "emails": [
+          "mmook@wtamu.edu",
+          "jtrautmann@wtamu.edu"
+        ]
+      }
+    ],
+    "emails": [
+      "mmook@wtamu.edu",
+      "jtrautmann@wtamu.edu"
+    ],
+    "emailCount": 2,
+    "verdict": "GOOD",
+    "reason": "2 email(s) found"
+  }
+]

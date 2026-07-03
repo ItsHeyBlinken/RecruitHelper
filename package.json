@@ -1,0 +1,28 @@
+{
+  "name": "recruitconnect",
+  "version": "0.1.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend",
+    "scraper"
+  ],
+  "scripts": {
+    "dev": "concurrently -n backend,frontend -c blue,green \"npm run dev -w backend\" \"npm run dev -w frontend\"",
+    "build": "npm run build --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "dev:frontend": "npm run dev -w frontend",
+    "dev:backend": "npm run dev -w backend",
+    "scrape": "tsx scraper/src/cli.ts",
+    "scrape:all": "tsx scraper/src/cli.ts --all",
+    "scrape:tx": "tsx scraper/src/cli.ts --all --state TX",
+    "scrape:tx-juco": "tsx scraper/src/cli.ts --all --state TX --division JUCO",
+    "seed": "tsx scraper/src/seed-schools.ts",
+    "texas:url-checklist": "node scripts/generate-texas-url-checklist.mjs",
+    "texas:apply-verification": "node scripts/apply-texas-verification-master.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "tsx": "^4.19.2"
+  }
+}

@@ -1,0 +1,1891 @@
+[
+  {
+    "school_name": "University of Alabama",
+    "abbreviation": "Bama",
+    "aliases": [
+      "Bama",
+      "Alabama",
+      "UA",
+      "ALA",
+      "Roll Tide"
+    ],
+    "division": "D1",
+    "state": "AL",
+    "athletics_url": "https://rolltide.com"
+  },
+  {
+    "school_name": "University of Oklahoma",
+    "abbreviation": "OU",
+    "aliases": [
+      "OU",
+      "Oklahoma",
+      "Sooners"
+    ],
+    "division": "D1",
+    "state": "OK",
+    "athletics_url": "https://soonersports.com"
+  },
+  {
+    "school_name": "University of Florida",
+    "abbreviation": "UF",
+    "aliases": [
+      "UF",
+      "Florida",
+      "Gators"
+    ],
+    "division": "D1",
+    "state": "FL",
+    "athletics_url": "https://floridagators.com"
+  },
+  {
+    "school_name": "University of Texas",
+    "abbreviation": "UT",
+    "aliases": [
+      "UT",
+      "Texas",
+      "Longhorns",
+      "UT Austin"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://texassports.com"
+  },
+  {
+    "school_name": "Louisiana State University",
+    "abbreviation": "LSU",
+    "aliases": [
+      "LSU",
+      "Louisiana State",
+      "Tigers"
+    ],
+    "division": "D1",
+    "state": "LA",
+    "athletics_url": "https://lsusports.net"
+  },
+  {
+    "school_name": "University of Tennessee",
+    "abbreviation": "UT",
+    "aliases": [
+      "UT",
+      "UTK",
+      "Tennessee",
+      "Vols",
+      "Volunteers"
+    ],
+    "division": "D1",
+    "state": "TN",
+    "athletics_url": "https://utsports.com"
+  },
+  {
+    "school_name": "University of Georgia",
+    "abbreviation": "UGA",
+    "aliases": [
+      "UGA",
+      "Georgia",
+      "Dawgs",
+      "Bulldogs"
+    ],
+    "division": "D1",
+    "state": "GA",
+    "athletics_url": "https://georgiadogs.com"
+  },
+  {
+    "school_name": "University of Arkansas",
+    "abbreviation": "Arkansas",
+    "aliases": [
+      "Arkansas",
+      "UA",
+      "UARK",
+      "Hogs",
+      "Razorbacks"
+    ],
+    "division": "D1",
+    "state": "AR",
+    "athletics_url": "https://arkansasrazorbacks.com"
+  },
+  {
+    "school_name": "University of Arizona",
+    "abbreviation": "UofA",
+    "aliases": [
+      "UofA",
+      "U of A",
+      "Arizona",
+      "UA",
+      "Wildcats"
+    ],
+    "division": "D1",
+    "state": "AZ",
+    "athletics_url": "https://arizonawildcats.com"
+  },
+  {
+    "school_name": "University of Washington",
+    "abbreviation": "UW",
+    "aliases": [
+      "UW",
+      "Washington",
+      "Huskies",
+      "U-Dub"
+    ],
+    "division": "D1",
+    "state": "WA",
+    "athletics_url": "https://gohuskies.com"
+  },
+  {
+    "school_name": "UCLA",
+    "abbreviation": "UCLA",
+    "aliases": [
+      "UCLA",
+      "Bruins"
+    ],
+    "division": "D1",
+    "state": "CA",
+    "athletics_url": "https://uclabruins.com"
+  },
+  {
+    "school_name": "University of Michigan",
+    "abbreviation": "Michigan",
+    "aliases": [
+      "Michigan",
+      "UM",
+      "MICH",
+      "UMich",
+      "Wolverines"
+    ],
+    "division": "D1",
+    "state": "MI",
+    "athletics_url": "https://mgoblue.com"
+  },
+  {
+    "school_name": "Ohio State University",
+    "abbreviation": "OSU",
+    "aliases": [
+      "OSU",
+      "Ohio State",
+      "tOSU",
+      "Buckeyes"
+    ],
+    "division": "D1",
+    "state": "OH",
+    "athletics_url": "https://ohiostatebuckeyes.com"
+  },
+  {
+    "school_name": "University of Oregon",
+    "abbreviation": "Oregon",
+    "aliases": [
+      "Oregon",
+      "UO",
+      "ORE",
+      "Ducks"
+    ],
+    "division": "D1",
+    "state": "OR",
+    "athletics_url": "https://goducks.com"
+  },
+  {
+    "school_name": "Texas A&M University",
+    "abbreviation": "A&M",
+    "aliases": [
+      "A&M",
+      "TAMU",
+      "Texas A&M",
+      "Aggies"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://12thman.com"
+  },
+  {
+    "school_name": "University of South Carolina",
+    "abbreviation": "SC",
+    "aliases": [
+      "SC",
+      "UofSC",
+      "South Carolina",
+      "Gamecocks"
+    ],
+    "division": "D1",
+    "state": "SC",
+    "athletics_url": "https://gamecocksonline.com"
+  },
+  {
+    "school_name": "University of Missouri",
+    "abbreviation": "Mizzou",
+    "aliases": [
+      "Mizzou",
+      "MIZ",
+      "Missouri",
+      "MU",
+      "Tigers"
+    ],
+    "division": "D1",
+    "state": "MO",
+    "athletics_url": "https://mutigers.com"
+  },
+  {
+    "school_name": "Auburn University",
+    "abbreviation": "Auburn",
+    "aliases": [
+      "Auburn",
+      "AU",
+      "Tigers"
+    ],
+    "division": "D1",
+    "state": "AL",
+    "athletics_url": "https://auburntigers.com"
+  },
+  {
+    "school_name": "Mississippi State University",
+    "abbreviation": "MSU",
+    "aliases": [
+      "MSU",
+      "MSST",
+      "Mississippi State",
+      "State",
+      "Bulldogs"
+    ],
+    "division": "D1",
+    "state": "MS",
+    "athletics_url": "https://hailstate.com"
+  },
+  {
+    "school_name": "University of Kentucky",
+    "abbreviation": "UK",
+    "aliases": [
+      "UK",
+      "Kentucky",
+      "Wildcats"
+    ],
+    "division": "D1",
+    "state": "KY",
+    "athletics_url": "https://ukathletics.com"
+  },
+  {
+    "school_name": "University of Nebraska",
+    "abbreviation": "Nebraska",
+    "aliases": [
+      "Nebraska",
+      "NU",
+      "NEB",
+      "Huskers"
+    ],
+    "division": "D1",
+    "state": "NE",
+    "athletics_url": "https://huskers.com"
+  },
+  {
+    "school_name": "Northwestern University",
+    "abbreviation": "NU",
+    "aliases": [
+      "NU",
+      "Northwestern",
+      "Wildcats"
+    ],
+    "division": "D1",
+    "state": "IL",
+    "athletics_url": "https://nusports.com"
+  },
+  {
+    "school_name": "University of Minnesota",
+    "abbreviation": "Minnesota",
+    "aliases": [
+      "Minnesota",
+      "UMN",
+      "MINN",
+      "Gophers"
+    ],
+    "division": "D1",
+    "state": "MN",
+    "athletics_url": "https://gophersports.com"
+  },
+  {
+    "school_name": "Purdue University",
+    "abbreviation": "Purdue",
+    "aliases": [
+      "Purdue",
+      "PUR",
+      "Boilermakers"
+    ],
+    "division": "D1",
+    "state": "IN",
+    "athletics_url": "https://purduesports.com"
+  },
+  {
+    "school_name": "Indiana University",
+    "abbreviation": "IU",
+    "aliases": [
+      "IU",
+      "Indiana",
+      "Hoosiers"
+    ],
+    "division": "D1",
+    "state": "IN",
+    "athletics_url": "https://iuhoosiers.com"
+  },
+  {
+    "school_name": "University of Virginia",
+    "abbreviation": "UVA",
+    "aliases": [
+      "UVA",
+      "Virginia",
+      "Cavaliers",
+      "Wahoos"
+    ],
+    "division": "D1",
+    "state": "VA",
+    "athletics_url": "https://virginiasports.com"
+  },
+  {
+    "school_name": "Duke University",
+    "abbreviation": "Duke",
+    "aliases": [
+      "Duke",
+      "Blue Devils"
+    ],
+    "division": "D1",
+    "state": "NC",
+    "athletics_url": "https://goduke.com"
+  },
+  {
+    "school_name": "Florida State University",
+    "abbreviation": "FSU",
+    "aliases": [
+      "FSU",
+      "Florida State",
+      "Seminoles",
+      "Noles"
+    ],
+    "division": "D1",
+    "state": "FL",
+    "athletics_url": "https://seminoles.com"
+  },
+  {
+    "school_name": "Clemson University",
+    "abbreviation": "Clemson",
+    "aliases": [
+      "Clemson",
+      "CLEM",
+      "Tigers"
+    ],
+    "division": "D1",
+    "state": "SC",
+    "athletics_url": "https://clemsontigers.com"
+  },
+  {
+    "school_name": "Stanford University",
+    "abbreviation": "Stanford",
+    "aliases": [
+      "Stanford",
+      "STAN",
+      "Cardinal"
+    ],
+    "division": "D1",
+    "state": "CA",
+    "athletics_url": "https://gostanford.com"
+  },
+  {
+    "school_name": "University of Notre Dame",
+    "abbreviation": "ND",
+    "aliases": [
+      "ND",
+      "Notre Dame",
+      "Fighting Irish",
+      "Irish"
+    ],
+    "division": "D1",
+    "state": "IN",
+    "athletics_url": "https://fightingirish.com"
+  },
+  {
+    "school_name": "Baylor University",
+    "abbreviation": "Baylor",
+    "aliases": [
+      "Baylor",
+      "BAY",
+      "Bears"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://baylorbears.com"
+  },
+  {
+    "school_name": "Oklahoma State University",
+    "abbreviation": "OKST",
+    "aliases": [
+      "OKST",
+      "OSU",
+      "Oklahoma State",
+      "Cowboys",
+      "Pokes"
+    ],
+    "division": "D1",
+    "state": "OK",
+    "athletics_url": "https://okstate.com"
+  },
+  {
+    "school_name": "University of Utah",
+    "abbreviation": "Utah",
+    "aliases": [
+      "Utah",
+      "UTAH",
+      "Utes"
+    ],
+    "division": "D1",
+    "state": "UT",
+    "athletics_url": "https://utahutes.com"
+  },
+  {
+    "school_name": "Arizona State University",
+    "abbreviation": "ASU",
+    "aliases": [
+      "ASU",
+      "Arizona State",
+      "Sun Devils"
+    ],
+    "division": "D1",
+    "state": "AZ",
+    "athletics_url": "https://thesundevils.com"
+  },
+  {
+    "school_name": "Chipola College",
+    "abbreviation": "Chipola",
+    "aliases": [
+      "Chipola",
+      "Lady Indians",
+      "Indians"
+    ],
+    "division": "JUCO",
+    "state": "FL",
+    "athletics_url": "https://chipolaathletics.com"
+  },
+  {
+    "school_name": "Wallace State Community College",
+    "abbreviation": "Wallace State",
+    "aliases": [
+      "Wallace State",
+      "WSCC",
+      "Lions"
+    ],
+    "division": "JUCO",
+    "state": "AL",
+    "athletics_url": "https://athletics.wallacestate.edu"
+  },
+  {
+    "school_name": "Odessa College",
+    "abbreviation": "Odessa",
+    "aliases": [
+      "Odessa",
+      "OC",
+      "Wranglers"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://wranglersports.com"
+  },
+  {
+    "school_name": "Tyler Junior College",
+    "abbreviation": "TJC",
+    "aliases": [
+      "TJC",
+      "Tyler Junior",
+      "Apaches"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://apacheathletics.com"
+  },
+  {
+    "school_name": "Eastern Arizona College",
+    "abbreviation": "EAC",
+    "aliases": [
+      "EAC",
+      "Eastern Arizona",
+      "Monsters"
+    ],
+    "division": "JUCO",
+    "state": "AZ",
+    "athletics_url": "https://www.eacmonsters.com"
+  },
+  {
+    "school_name": "Iowa Western Community College",
+    "abbreviation": "IWCC",
+    "aliases": [
+      "IWCC",
+      "Iowa Western",
+      "Reivers"
+    ],
+    "division": "JUCO",
+    "state": "IA",
+    "athletics_url": "https://www.goreivers.com"
+  },
+  {
+    "school_name": "Seminole State College",
+    "abbreviation": "SSC",
+    "aliases": [
+      "SSC",
+      "Seminole State",
+      "Trojans"
+    ],
+    "division": "JUCO",
+    "state": "OK",
+    "athletics_url": "https://sscathletics.com"
+  },
+  {
+    "school_name": "Central Arizona College",
+    "abbreviation": "CAC",
+    "aliases": [
+      "CAC",
+      "Central Arizona",
+      "Vaqueros"
+    ],
+    "division": "JUCO",
+    "state": "AZ",
+    "athletics_url": "https://www.centralaz.edu/athletics"
+  },
+  {
+    "school_name": "Butler Community College",
+    "abbreviation": "Butler CC",
+    "aliases": [
+      "Butler CC",
+      "Butler",
+      "Grizzlies"
+    ],
+    "division": "JUCO",
+    "state": "KS",
+    "athletics_url": "https://www.butlergrizzlies.com"
+  },
+  {
+    "school_name": "McLennan Community College",
+    "abbreviation": "McLennan",
+    "aliases": [
+      "McLennan",
+      "MCC",
+      "Highlanders"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://mclennanathletics.com"
+  },
+  {
+    "school_name": "Tallahassee State College",
+    "abbreviation": "TCC",
+    "aliases": [
+      "TCC",
+      "Tallahassee State",
+      "Eagles"
+    ],
+    "division": "JUCO",
+    "state": "FL",
+    "athletics_url": "https://www.tccathletics.com"
+  },
+  {
+    "school_name": "Crowder College",
+    "abbreviation": "Crowder",
+    "aliases": [
+      "Crowder",
+      "Roughriders"
+    ],
+    "division": "JUCO",
+    "state": "MO",
+    "athletics_url": "https://www.crowderathletics.com"
+  },
+  {
+    "school_name": "Northwest Florida State College",
+    "abbreviation": "NWFSC",
+    "aliases": [
+      "NWFSC",
+      "Northwest Florida",
+      "Raiders"
+    ],
+    "division": "JUCO",
+    "state": "FL",
+    "athletics_url": "https://www.raiderathletics.com"
+  },
+  {
+    "school_name": "Grayson College",
+    "abbreviation": "Grayson",
+    "aliases": [
+      "Grayson",
+      "Vikings"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.gcvikings.com"
+  },
+  {
+    "school_name": "Gadsden State Community College",
+    "abbreviation": "Gadsden State",
+    "aliases": [
+      "Gadsden State",
+      "Cardinals"
+    ],
+    "division": "JUCO",
+    "state": "AL",
+    "athletics_url": "https://www.gadsdenstate.edu/athletics"
+  },
+  {
+    "school_name": "University of Texas at Tyler",
+    "abbreviation": "UT Tyler",
+    "aliases": [
+      "UT Tyler",
+      "Patriots"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://uttylerpatriots.com"
+  },
+  {
+    "school_name": "University of Tampa",
+    "abbreviation": "Tampa",
+    "aliases": [
+      "Tampa",
+      "UTampa",
+      "Spartans"
+    ],
+    "division": "D2",
+    "state": "FL",
+    "athletics_url": "https://www.tampaspartans.com"
+  },
+  {
+    "school_name": "Western Washington University",
+    "abbreviation": "WWU",
+    "aliases": [
+      "WWU",
+      "Western Washington",
+      "Vikings"
+    ],
+    "division": "D2",
+    "state": "WA",
+    "athletics_url": "https://wwuvikings.com"
+  },
+  {
+    "school_name": "Pace University",
+    "abbreviation": "Pace",
+    "aliases": [
+      "Pace",
+      "Setters"
+    ],
+    "division": "D2",
+    "state": "NY",
+    "athletics_url": "https://paceuathletics.com"
+  },
+  {
+    "school_name": "University of Central Oklahoma",
+    "abbreviation": "UCO",
+    "aliases": [
+      "UCO",
+      "Central Oklahoma",
+      "Bronchos"
+    ],
+    "division": "D2",
+    "state": "OK",
+    "athletics_url": "https://bronchosports.com"
+  },
+  {
+    "school_name": "Saginaw Valley State University",
+    "abbreviation": "SVSU",
+    "aliases": [
+      "SVSU",
+      "Saginaw Valley",
+      "Cardinals"
+    ],
+    "division": "D2",
+    "state": "MI",
+    "athletics_url": "https://svsucardinals.com"
+  },
+  {
+    "school_name": "University of North Georgia",
+    "abbreviation": "UNG",
+    "aliases": [
+      "UNG",
+      "North Georgia",
+      "Nighthawks"
+    ],
+    "division": "D2",
+    "state": "GA",
+    "athletics_url": "https://ungathletics.com"
+  },
+  {
+    "school_name": "Shippensburg University",
+    "abbreviation": "Ship",
+    "aliases": [
+      "Ship",
+      "Shippensburg",
+      "Raiders"
+    ],
+    "division": "D2",
+    "state": "PA",
+    "athletics_url": "https://shipraiders.com"
+  },
+  {
+    "school_name": "West Texas A&M University",
+    "abbreviation": "WT",
+    "aliases": [
+      "WT",
+      "West Texas A&M",
+      "Buffs",
+      "Buffaloes"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://gobuffsgo.com"
+  },
+  {
+    "school_name": "Francis Marion University",
+    "abbreviation": "FMU",
+    "aliases": [
+      "FMU",
+      "Francis Marion",
+      "Patriots"
+    ],
+    "division": "D2",
+    "state": "SC",
+    "athletics_url": "https://fmupatriots.com"
+  },
+  {
+    "school_name": "Auburn University at Montgomery",
+    "abbreviation": "AUM",
+    "aliases": [
+      "AUM",
+      "Auburn Montgomery",
+      "Warhawks"
+    ],
+    "division": "D2",
+    "state": "AL",
+    "athletics_url": "https://aumathletics.com"
+  },
+  {
+    "school_name": "Augustana University",
+    "abbreviation": "Augie",
+    "aliases": [
+      "Augie",
+      "Augustana",
+      "Vikings"
+    ],
+    "division": "D2",
+    "state": "SD",
+    "athletics_url": "https://goaugie.com"
+  },
+  {
+    "school_name": "Angelo State University",
+    "abbreviation": "Angelo State",
+    "aliases": [
+      "Angelo State",
+      "Angelo",
+      "Rams"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://angelosports.com"
+  },
+  {
+    "school_name": "Grand Valley State University",
+    "abbreviation": "GVSU",
+    "aliases": [
+      "GVSU",
+      "Grand Valley",
+      "Lakers"
+    ],
+    "division": "D2",
+    "state": "MI",
+    "athletics_url": "https://gvsulakers.com"
+  },
+  {
+    "school_name": "Colorado Mesa University",
+    "abbreviation": "CMU",
+    "aliases": [
+      "CMU",
+      "Colorado Mesa",
+      "Mavericks"
+    ],
+    "division": "D2",
+    "state": "CO",
+    "athletics_url": "https://cmumavericks.com"
+  },
+  {
+    "school_name": "Trine University",
+    "abbreviation": "Trine",
+    "aliases": [
+      "Trine",
+      "Thunder"
+    ],
+    "division": "D3",
+    "state": "IN",
+    "athletics_url": "https://trinethunder.com"
+  },
+  {
+    "school_name": "Virginia Wesleyan University",
+    "abbreviation": "VWU",
+    "aliases": [
+      "VWU",
+      "Virginia Wesleyan",
+      "Marlins"
+    ],
+    "division": "D3",
+    "state": "VA",
+    "athletics_url": "https://vwuathletics.com"
+  },
+  {
+    "school_name": "Salisbury University",
+    "abbreviation": "Salisbury",
+    "aliases": [
+      "Salisbury",
+      "SU",
+      "Sea Gulls"
+    ],
+    "division": "D3",
+    "state": "MD",
+    "athletics_url": "https://suseagulls.com"
+  },
+  {
+    "school_name": "Texas Lutheran University",
+    "abbreviation": "TLU",
+    "aliases": [
+      "TLU",
+      "Texas Lutheran",
+      "Bulldogs"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://tlubulldogs.com"
+  },
+  {
+    "school_name": "Messiah University",
+    "abbreviation": "Messiah",
+    "aliases": [
+      "Messiah",
+      "Falcons"
+    ],
+    "division": "D3",
+    "state": "PA",
+    "athletics_url": "https://gomessiah.com"
+  },
+  {
+    "school_name": "University of Redlands",
+    "abbreviation": "Redlands",
+    "aliases": [
+      "Redlands",
+      "Bulldogs"
+    ],
+    "division": "D3",
+    "state": "CA",
+    "athletics_url": "https://goredlands.com"
+  },
+  {
+    "school_name": "East Texas Baptist University",
+    "abbreviation": "ETBU",
+    "aliases": [
+      "ETBU",
+      "East Texas Baptist",
+      "Tigers"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://goetbutigers.com"
+  },
+  {
+    "school_name": "Christopher Newport University",
+    "abbreviation": "CNU",
+    "aliases": [
+      "CNU",
+      "Christopher Newport",
+      "Captains"
+    ],
+    "division": "D3",
+    "state": "VA",
+    "athletics_url": "https://cnusports.com"
+  },
+  {
+    "school_name": "Tufts University",
+    "abbreviation": "Tufts",
+    "aliases": [
+      "Tufts",
+      "Jumbos"
+    ],
+    "division": "D3",
+    "state": "MA",
+    "athletics_url": "https://gotuftsjumbos.com"
+  },
+  {
+    "school_name": "Emory University",
+    "abbreviation": "Emory",
+    "aliases": [
+      "Emory",
+      "Eagles"
+    ],
+    "division": "D3",
+    "state": "GA",
+    "athletics_url": "https://emoryathletics.com"
+  },
+  {
+    "school_name": "Luther College",
+    "abbreviation": "Luther",
+    "aliases": [
+      "Luther",
+      "Norse"
+    ],
+    "division": "D3",
+    "state": "IA",
+    "athletics_url": "https://luthernorse.com"
+  },
+  {
+    "school_name": "University of Wisconsin-Whitewater",
+    "abbreviation": "UWW",
+    "aliases": [
+      "UWW",
+      "Whitewater",
+      "Warhawks"
+    ],
+    "division": "D3",
+    "state": "WI",
+    "athletics_url": "https://www.uwwsports.com"
+  },
+  {
+    "school_name": "Williams College",
+    "abbreviation": "Williams",
+    "aliases": [
+      "Williams",
+      "Ephs"
+    ],
+    "division": "D3",
+    "state": "MA",
+    "athletics_url": "https://ephsports.williams.edu"
+  },
+  {
+    "school_name": "St. John Fisher University",
+    "abbreviation": "Fisher",
+    "aliases": [
+      "Fisher",
+      "St. John Fisher",
+      "Cardinals"
+    ],
+    "division": "D3",
+    "state": "NY",
+    "athletics_url": "https://sjfas.com"
+  },
+  {
+    "school_name": "SUNY Cortland",
+    "abbreviation": "Cortland",
+    "aliases": [
+      "Cortland",
+      "SUNY Cortland",
+      "Red Dragons"
+    ],
+    "division": "D3",
+    "state": "NY",
+    "athletics_url": "https://cortlandreddragons.com"
+  },
+  {
+    "school_name": "Midland College",
+    "abbreviation": "Midland",
+    "aliases": [
+      "Midland",
+      "Lady Chaps",
+      "Chaps"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://gochaps.com"
+  },
+  {
+    "school_name": "Temple College",
+    "abbreviation": "Temple",
+    "aliases": [
+      "Temple",
+      "Leopards"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.tcleopards.com"
+  },
+  {
+    "school_name": "Weatherford College",
+    "abbreviation": "Weatherford",
+    "aliases": [
+      "Weatherford",
+      "Roos"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://wcathletics.com"
+  },
+  {
+    "school_name": "North Central Texas College",
+    "abbreviation": "NCTC",
+    "aliases": [
+      "NCTC",
+      "North Central Texas"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://nctcathletics.com"
+  },
+  {
+    "school_name": "Vernon College",
+    "abbreviation": "Vernon",
+    "aliases": [
+      "Vernon",
+      "Chaparrals"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.vernoncollege.edu/athletics"
+  },
+  {
+    "school_name": "Cisco College",
+    "abbreviation": "Cisco",
+    "aliases": [
+      "Cisco",
+      "Wranglers"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.wranglersports.net"
+  },
+  {
+    "school_name": "Howard College",
+    "abbreviation": "Howard",
+    "aliases": [
+      "Howard College",
+      "Hawks"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.hchawk.com"
+  },
+  {
+    "school_name": "Western Texas College",
+    "abbreviation": "WTC",
+    "aliases": [
+      "WTC",
+      "Western Texas",
+      "Westerners"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.wtcathletics.com"
+  },
+  {
+    "school_name": "Kilgore College",
+    "abbreviation": "Kilgore",
+    "aliases": [
+      "Kilgore",
+      "Rangers"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.kcrangernation.com"
+  },
+  {
+    "school_name": "Navarro College",
+    "abbreviation": "Navarro",
+    "aliases": [
+      "Navarro",
+      "Bulldogs"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://navarrobulldogs.com"
+  },
+  {
+    "school_name": "Dallas College Brookhaven",
+    "abbreviation": "Brookhaven",
+    "aliases": [
+      "Dallas College Brookhaven",
+      "Brookhaven",
+      "Bears"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://brookhavenathletics.com"
+  },
+  {
+    "school_name": "Dallas College Eastfield",
+    "abbreviation": "Eastfield",
+    "aliases": [
+      "Dallas College Eastfield",
+      "Eastfield",
+      "Bees"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://eastfieldathletics.com"
+  },
+  {
+    "school_name": "Dallas College North Lake",
+    "abbreviation": "North Lake",
+    "aliases": [
+      "Dallas College North Lake",
+      "North Lake",
+      "Blazers"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://northlakecollegeathletics.com"
+  },
+  {
+    "school_name": "Dallas College Richland",
+    "abbreviation": "Richland",
+    "aliases": [
+      "Dallas College Richland",
+      "Richland",
+      "Thunderducks"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://rlcsports.com"
+  },
+  {
+    "school_name": "Blinn College",
+    "abbreviation": "Blinn",
+    "aliases": [
+      "Blinn",
+      "Buccaneers",
+      "Bucs"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://buccaneersports.com"
+  },
+  {
+    "school_name": "San Jacinto College",
+    "abbreviation": "San Jac",
+    "aliases": [
+      "San Jac",
+      "San Jacinto",
+      "Gators"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://sanjacsports.com"
+  },
+  {
+    "school_name": "Trinity Valley Community College",
+    "abbreviation": "TVCC",
+    "aliases": [
+      "TVCC",
+      "Trinity Valley",
+      "Cardinals"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://tvccsports.com"
+  },
+  {
+    "school_name": "Paris Junior College",
+    "abbreviation": "PJC",
+    "aliases": [
+      "PJC",
+      "Paris JC",
+      "Dragons"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://pjcathletics.com"
+  },
+  {
+    "school_name": "Hill College",
+    "abbreviation": "Hill",
+    "aliases": [
+      "Hill College",
+      "Rebels"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://hillcollegeathletics.com"
+  },
+  {
+    "school_name": "Clarendon College",
+    "abbreviation": "Clarendon",
+    "aliases": [
+      "Clarendon",
+      "Bulldogs"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://clarendonbulldogs.com"
+  },
+  {
+    "school_name": "Frank Phillips College",
+    "abbreviation": "Frank Phillips",
+    "aliases": [
+      "Frank Phillips",
+      "FPC",
+      "Plainsmen"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://plainsmensports.com"
+  },
+  {
+    "school_name": "El Paso Community College",
+    "abbreviation": "EPCC",
+    "aliases": [
+      "EPCC",
+      "El Paso CC",
+      "Tejanos"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.epcc.edu/Services/Athletics/softball"
+  },
+  {
+    "school_name": "Ranger College",
+    "abbreviation": "Ranger",
+    "aliases": [
+      "Ranger",
+      "Rangers"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.rangersports.net"
+  },
+  {
+    "school_name": "Trinity University",
+    "abbreviation": "Trinity",
+    "aliases": [
+      "Trinity",
+      "Tigers"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://trinitytigers.com"
+  },
+  {
+    "school_name": "Concordia University Texas",
+    "abbreviation": "Concordia TX",
+    "aliases": [
+      "Concordia Texas",
+      "CTX",
+      "Tornados"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://athletics.concordia.edu"
+  },
+  {
+    "school_name": "University of Dallas",
+    "abbreviation": "UDallas",
+    "aliases": [
+      "UDallas",
+      "UD",
+      "Crusaders"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://udallasathletics.com"
+  },
+  {
+    "school_name": "Austin College",
+    "abbreviation": "Austin College",
+    "aliases": [
+      "Austin College",
+      "Kangaroos"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://acroos.com"
+  },
+  {
+    "school_name": "Hardin-Simmons University",
+    "abbreviation": "HSU",
+    "aliases": [
+      "HSU",
+      "Hardin-Simmons",
+      "Cowgirls"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://hsuathletics.com"
+  },
+  {
+    "school_name": "Howard Payne University",
+    "abbreviation": "HPU",
+    "aliases": [
+      "HPU",
+      "Howard Payne",
+      "Yellow Jackets"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://hpusports.com"
+  },
+  {
+    "school_name": "University of Mary Hardin-Baylor",
+    "abbreviation": "UMHB",
+    "aliases": [
+      "UMHB",
+      "Mary Hardin-Baylor",
+      "Crusaders"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://cruathletics.com"
+  },
+  {
+    "school_name": "Southwestern University",
+    "abbreviation": "Southwestern",
+    "aliases": [
+      "Southwestern",
+      "Pirates"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://southwesternpirates.com"
+  },
+  {
+    "school_name": "Schreiner University",
+    "abbreviation": "Schreiner",
+    "aliases": [
+      "Schreiner",
+      "Mountaineers"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://schreinermountaineers.com"
+  },
+  {
+    "school_name": "LeTourneau University",
+    "abbreviation": "LETU",
+    "aliases": [
+      "LETU",
+      "LeTourneau",
+      "Yellowjackets"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://letuathletics.com"
+  },
+  {
+    "school_name": "McMurry University",
+    "abbreviation": "McMurry",
+    "aliases": [
+      "McMurry",
+      "War Hawks"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://mcmurrysports.com"
+  },
+  {
+    "school_name": "University of St. Thomas",
+    "abbreviation": "UST",
+    "aliases": [
+      "UST",
+      "St. Thomas",
+      "St. Thomas Houston",
+      "Celts"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://ustcelts.com"
+  },
+  {
+    "school_name": "University of Texas at Dallas",
+    "abbreviation": "UTD",
+    "aliases": [
+      "UTD",
+      "UT Dallas",
+      "Comets"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://utdcomets.com"
+  },
+  {
+    "school_name": "Texas Woman's University",
+    "abbreviation": "TWU",
+    "aliases": [
+      "TWU",
+      "Texas Woman's",
+      "Pioneers"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://twuathletics.com"
+  },
+  {
+    "school_name": "Texas A&M University-Kingsville",
+    "abbreviation": "TAMUK",
+    "aliases": [
+      "TAMUK",
+      "A&M Kingsville",
+      "Javelinas"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://javelinaathletics.com"
+  },
+  {
+    "school_name": "Texas A&M International University",
+    "abbreviation": "TAMIU",
+    "aliases": [
+      "TAMIU",
+      "Dustdevils"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://godustdevils.com"
+  },
+  {
+    "school_name": "University of Texas Permian Basin",
+    "abbreviation": "UTPB",
+    "aliases": [
+      "UTPB",
+      "Permian Basin",
+      "Falcons"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://utpbfalcons.com"
+  },
+  {
+    "school_name": "Lubbock Christian University",
+    "abbreviation": "LCU",
+    "aliases": [
+      "LCU",
+      "Lubbock Christian",
+      "Chaps"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://lcuchaps.com"
+  },
+  {
+    "school_name": "St. Mary's University",
+    "abbreviation": "St. Mary's",
+    "aliases": [
+      "St. Mary's",
+      "Rattlers"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://rattlerathletics.com"
+  },
+  {
+    "school_name": "St. Edward's University",
+    "abbreviation": "St. Edward's",
+    "aliases": [
+      "St. Edward's",
+      "Hilltoppers"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://gohilltoppers.com"
+  },
+  {
+    "school_name": "Texas Tech University",
+    "abbreviation": "TTU",
+    "aliases": [
+      "TTU",
+      "Texas Tech",
+      "Red Raiders"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://texastech.com"
+  },
+  {
+    "school_name": "University of Houston",
+    "abbreviation": "Houston",
+    "aliases": [
+      "Houston",
+      "UH",
+      "Cougars"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://uhcougars.com"
+  },
+  {
+    "school_name": "Texas State University",
+    "abbreviation": "Texas State",
+    "aliases": [
+      "Texas State",
+      "TXST",
+      "Bobcats"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://txst.com"
+  },
+  {
+    "school_name": "University of Texas at San Antonio",
+    "abbreviation": "UTSA",
+    "aliases": [
+      "UTSA",
+      "Roadrunners"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://goutsa.com"
+  },
+  {
+    "school_name": "University of Texas at Arlington",
+    "abbreviation": "UTA",
+    "aliases": [
+      "UTA",
+      "UT Arlington",
+      "Mavericks"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://utamavs.com"
+  },
+  {
+    "school_name": "University of Texas at El Paso",
+    "abbreviation": "UTEP",
+    "aliases": [
+      "UTEP",
+      "Miners"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://utepminers.com"
+  },
+  {
+    "school_name": "Texas Southern University",
+    "abbreviation": "TSU",
+    "aliases": [
+      "TSU",
+      "Texas Southern",
+      "Tigers"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://tsusports.com"
+  },
+  {
+    "school_name": "University of the Incarnate Word",
+    "abbreviation": "UIW",
+    "aliases": [
+      "UIW",
+      "Incarnate Word",
+      "Cardinals"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://uiwcardinals.com"
+  },
+  {
+    "school_name": "Sam Houston State University",
+    "abbreviation": "Sam Houston",
+    "aliases": [
+      "Sam Houston",
+      "SHSU",
+      "Bearkats"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://gobearkats.com"
+  },
+  {
+    "school_name": "University of North Texas",
+    "abbreviation": "UNT",
+    "aliases": [
+      "UNT",
+      "North Texas",
+      "Mean Green"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://meangreensports.com"
+  },
+  {
+    "school_name": "Abilene Christian University",
+    "abbreviation": "ACU",
+    "aliases": [
+      "ACU",
+      "Abilene Christian",
+      "Wildcats"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://acusports.com"
+  },
+  {
+    "school_name": "Houston Christian University",
+    "abbreviation": "HCU",
+    "aliases": [
+      "HCU",
+      "Houston Christian",
+      "Huskies"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://hcuhuskies.com"
+  },
+  {
+    "school_name": "Lamar University",
+    "abbreviation": "Lamar",
+    "aliases": [
+      "Lamar",
+      "Cardinals",
+      "LU"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://lamarcardinals.com"
+  },
+  {
+    "school_name": "Prairie View A&M University",
+    "abbreviation": "PVAMU",
+    "aliases": [
+      "PVAMU",
+      "Prairie View",
+      "Panthers"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://pvpanthers.com"
+  },
+  {
+    "school_name": "Stephen F. Austin State University",
+    "abbreviation": "SFA",
+    "aliases": [
+      "SFA",
+      "Stephen F. Austin",
+      "Lumberjacks"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://sfajacks.com"
+  },
+  {
+    "school_name": "Tarleton State University",
+    "abbreviation": "Tarleton",
+    "aliases": [
+      "Tarleton",
+      "Texans"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://tarletonsports.com"
+  },
+  {
+    "school_name": "Texas A&M University-Commerce",
+    "abbreviation": "TAMUC",
+    "aliases": [
+      "TAMUC",
+      "A&M-Commerce",
+      "Lions",
+      "East Texas A&M"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://lionathletics.com"
+  },
+  {
+    "school_name": "Texas A&M University-Corpus Christi",
+    "abbreviation": "TAMUCC",
+    "aliases": [
+      "TAMUCC",
+      "A&M-Corpus Christi",
+      "Islanders"
+    ],
+    "division": "D1",
+    "state": "TX",
+    "athletics_url": "https://goislanders.com"
+  },
+  {
+    "school_name": "Midwestern State University",
+    "abbreviation": "MSU Texas",
+    "aliases": [
+      "MSU Texas",
+      "Midwestern State",
+      "Mustangs"
+    ],
+    "division": "D2",
+    "state": "TX",
+    "athletics_url": "https://msumustangs.com"
+  },
+  {
+    "school_name": "Sul Ross State University",
+    "abbreviation": "Sul Ross",
+    "aliases": [
+      "Sul Ross",
+      "SRSU",
+      "Lobos"
+    ],
+    "division": "D3",
+    "state": "TX",
+    "athletics_url": "https://srlobos.com"
+  },
+  {
+    "school_name": "Alvin Community College",
+    "abbreviation": "Alvin",
+    "aliases": [
+      "Alvin",
+      "Alvin College",
+      "Dolphins"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://athletics.alvincollege.edu"
+  },
+  {
+    "school_name": "Angelina College",
+    "abbreviation": "Angelina",
+    "aliases": [
+      "Angelina",
+      "Roadrunners"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://angelinaathletics.com"
+  },
+  {
+    "school_name": "Coastal Bend College",
+    "abbreviation": "CBC",
+    "aliases": [
+      "CBC",
+      "Coastal Bend",
+      "Cougars"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://cbcathletics.com"
+  },
+  {
+    "school_name": "Galveston College",
+    "abbreviation": "Galveston",
+    "aliases": [
+      "Galveston College",
+      "Whitecaps"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://www.gcwhitecaps.com"
+  },
+  {
+    "school_name": "Northeast Texas Community College",
+    "abbreviation": "NETCC",
+    "aliases": [
+      "NETCC",
+      "Northeast Texas",
+      "Eagles",
+      "NTCC"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://ntcceagles.com"
+  },
+  {
+    "school_name": "South Plains College",
+    "abbreviation": "SPC",
+    "aliases": [
+      "SPC",
+      "South Plains",
+      "Texans"
+    ],
+    "division": "JUCO",
+    "state": "TX",
+    "athletics_url": "https://spctexans.com"
+  },
+  {
+    "school_name": "University of Houston-Victoria",
+    "abbreviation": "UHV",
+    "aliases": [
+      "UHV",
+      "Houston-Victoria",
+      "Jaguars"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://uhvjaguars.com"
+  },
+  {
+    "school_name": "Jarvis Christian University",
+    "abbreviation": "Jarvis",
+    "aliases": [
+      "Jarvis Christian",
+      "JC",
+      "Bulldogs"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://jcubulldogs.com"
+  },
+  {
+    "school_name": "Nelson University",
+    "abbreviation": "Nelson",
+    "aliases": [
+      "Nelson",
+      "Lions"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://nelsonlions.com"
+  },
+  {
+    "school_name": "Our Lady of the Lake University",
+    "abbreviation": "OLLU",
+    "aliases": [
+      "OLLU",
+      "Our Lady of the Lake",
+      "Saints"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://ollusaintsathletics.com"
+  },
+  {
+    "school_name": "Texas A&M University-Texarkana",
+    "abbreviation": "TAMUT",
+    "aliases": [
+      "TAMUT",
+      "A&M-Texarkana",
+      "Texas A&M-Texarkana",
+      "Eagles"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://tamuteagles.com"
+  },
+  {
+    "school_name": "Texas College",
+    "abbreviation": "Texas College",
+    "aliases": [
+      "Texas College",
+      "Steers"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://www.tcsteersathletics.com"
+  },
+  {
+    "school_name": "Texas Wesleyan University",
+    "abbreviation": "TXWES",
+    "aliases": [
+      "TXWES",
+      "Texas Wesleyan",
+      "Rams"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://ramsports.net/sports/softball"
+  },
+  {
+    "school_name": "University of the Southwest",
+    "abbreviation": "USW",
+    "aliases": [
+      "USW",
+      "Southwest",
+      "Mustangs"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://uswathletics.com"
+  },
+  {
+    "school_name": "Wayland Baptist University",
+    "abbreviation": "Wayland",
+    "aliases": [
+      "Wayland Baptist",
+      "WBU",
+      "Pioneers"
+    ],
+    "division": "NAIA",
+    "state": "TX",
+    "athletics_url": "https://wbuathletics.com"
+  }
+]

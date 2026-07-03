@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Texas Softball URL Verification</title>
+  <style>
+    :root { color-scheme: light dark; font-family: system-ui, sans-serif; }
+    body { margin: 0; padding: 1.5rem; max-width: 1200px; }
+    h1 { margin-top: 0; }
+    .summary { margin: 1rem 0 2rem; padding: 1rem; border: 1px solid #8884; border-radius: 8px; }
+    .division { margin-bottom: 2.5rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 0.5rem 0.75rem; border-bottom: 1px solid #8883; vertical-align: top; }
+    th { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    td:first-child { width: 2.5rem; }
+    td:nth-child(2) { width: 28%; }
+    .notes { width: 100%; box-sizing: border-box; padding: 0.35rem 0.5rem; }
+    tr.verified td { opacity: 0.65; }
+    tr.verified td:nth-child(2) label { text-decoration: line-through; }
+    .count { font-size: 0.9rem; font-weight: normal; opacity: 0.8; }
+    .actions { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
+    button { padding: 0.45rem 0.8rem; cursor: pointer; }
+    a { word-break: break-all; }
+  </style>
+</head>
+<body>
+  <h1>Texas Softball Athletics URL Verification</h1>
+  <p>Check each link before bulk scraping. Progress saves in this browser.</p>
+  <div class="summary">
+    <strong>Total:</strong> <span id="total-progress">0 / 90</span> verified
+    <div class="actions">
+      <button type="button" id="reset-progress">Reset all progress</button>
+      <button type="button" id="export-notes">Copy notes to clipboard</button>
+    </div>
+  </div>
+  
+    <section class="division">
+      <h2>D1 <span class="count" data-division="D1">0 / 21</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>OK</th>
+            <th>School</th>
+            <th>Athletics URL</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-school-id="abilene-christian-university">
+          <td><input type="checkbox" id="chk-abilene-christian-university" data-school-id="abilene-christian-university" aria-label="Verified Abilene Christian University" /></td>
+          <td><label for="chk-abilene-christian-university">Abilene Christian University</label></td>
+          <td><a href="https://acusports.com" target="_blank" rel="noopener noreferrer">https://acusports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="abilene-christian-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="baylor-university">
+          <td><input type="checkbox" id="chk-baylor-university" data-school-id="baylor-university" aria-label="Verified Baylor University" /></td>
+          <td><label for="chk-baylor-university">Baylor University</label></td>
+          <td><a href="https://baylorbears.com" target="_blank" rel="noopener noreferrer">https://baylorbears.com</a></td>
+          <td><input type="text" class="notes" data-school-id="baylor-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="houston-christian-university">
+          <td><input type="checkbox" id="chk-houston-christian-university" data-school-id="houston-christian-university" aria-label="Verified Houston Christian University" /></td>
+          <td><label for="chk-houston-christian-university">Houston Christian University</label></td>
+          <td><a href="https://hcuhuskies.com" target="_blank" rel="noopener noreferrer">https://hcuhuskies.com</a></td>
+          <td><input type="text" class="notes" data-school-id="houston-christian-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="lamar-university">
+          <td><input type="checkbox" id="chk-lamar-university" data-school-id="lamar-university" aria-label="Verified Lamar University" /></td>
+          <td><label for="chk-lamar-university">Lamar University</label></td>
+          <td><a href="https://lamarcardinals.com" target="_blank" rel="noopener noreferrer">https://lamarcardinals.com</a></td>
+          <td><input type="text" class="notes" data-school-id="lamar-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="prairie-view-a-m-university">
+          <td><input type="checkbox" id="chk-prairie-view-a-m-university" data-school-id="prairie-view-a-m-university" aria-label="Verified Prairie View A&amp;M University" /></td>
+          <td><label for="chk-prairie-view-a-m-university">Prairie View A&amp;M University</label></td>
+          <td><a href="https://pvpanthers.com" target="_blank" rel="noopener noreferrer">https://pvpanthers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="prairie-view-a-m-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="sam-houston-state-university">
+          <td><input type="checkbox" id="chk-sam-houston-state-university" data-school-id="sam-houston-state-university" aria-label="Verified Sam Houston State University" /></td>
+          <td><label for="chk-sam-houston-state-university">Sam Houston State University</label></td>
+          <td><a href="https://gobearkats.com" target="_blank" rel="noopener noreferrer">https://gobearkats.com</a></td>
+          <td><input type="text" class="notes" data-school-id="sam-houston-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="stephen-f-austin-state-university">
+          <td><input type="checkbox" id="chk-stephen-f-austin-state-university" data-school-id="stephen-f-austin-state-university" aria-label="Verified Stephen F. Austin State University" /></td>
+          <td><label for="chk-stephen-f-austin-state-university">Stephen F. Austin State University</label></td>
+          <td><a href="https://sfajacks.com" target="_blank" rel="noopener noreferrer">https://sfajacks.com</a></td>
+          <td><input type="text" class="notes" data-school-id="stephen-f-austin-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="tarleton-state-university">
+          <td><input type="checkbox" id="chk-tarleton-state-university" data-school-id="tarleton-state-university" aria-label="Verified Tarleton State University" /></td>
+          <td><label for="chk-tarleton-state-university">Tarleton State University</label></td>
+          <td><a href="https://tarletonsports.com" target="_blank" rel="noopener noreferrer">https://tarletonsports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="tarleton-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-university">
+          <td><input type="checkbox" id="chk-texas-a-m-university" data-school-id="texas-a-m-university" aria-label="Verified Texas A&amp;M University" /></td>
+          <td><label for="chk-texas-a-m-university">Texas A&amp;M University</label></td>
+          <td><a href="https://12thman.com" target="_blank" rel="noopener noreferrer">https://12thman.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-university-commerce">
+          <td><input type="checkbox" id="chk-texas-a-m-university-commerce" data-school-id="texas-a-m-university-commerce" aria-label="Verified Texas A&amp;M University-Commerce" /></td>
+          <td><label for="chk-texas-a-m-university-commerce">Texas A&amp;M University-Commerce</label></td>
+          <td><a href="https://lionathletics.com" target="_blank" rel="noopener noreferrer">https://lionathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-university-commerce" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-university-corpus-christi">
+          <td><input type="checkbox" id="chk-texas-a-m-university-corpus-christi" data-school-id="texas-a-m-university-corpus-christi" aria-label="Verified Texas A&amp;M University-Corpus Christi" /></td>
+          <td><label for="chk-texas-a-m-university-corpus-christi">Texas A&amp;M University-Corpus Christi</label></td>
+          <td><a href="https://goislanders.com" target="_blank" rel="noopener noreferrer">https://goislanders.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-university-corpus-christi" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-southern-university">
+          <td><input type="checkbox" id="chk-texas-southern-university" data-school-id="texas-southern-university" aria-label="Verified Texas Southern University" /></td>
+          <td><label for="chk-texas-southern-university">Texas Southern University</label></td>
+          <td><a href="https://tsusports.com" target="_blank" rel="noopener noreferrer">https://tsusports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-southern-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-state-university">
+          <td><input type="checkbox" id="chk-texas-state-university" data-school-id="texas-state-university" aria-label="Verified Texas State University" /></td>
+          <td><label for="chk-texas-state-university">Texas State University</label></td>
+          <td><a href="https://txst.com" target="_blank" rel="noopener noreferrer">https://txst.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-tech-university">
+          <td><input type="checkbox" id="chk-texas-tech-university" data-school-id="texas-tech-university" aria-label="Verified Texas Tech University" /></td>
+          <td><label for="chk-texas-tech-university">Texas Tech University</label></td>
+          <td><a href="https://texastech.com" target="_blank" rel="noopener noreferrer">https://texastech.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-tech-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-houston">
+          <td><input type="checkbox" id="chk-university-of-houston" data-school-id="university-of-houston" aria-label="Verified University of Houston" /></td>
+          <td><label for="chk-university-of-houston">University of Houston</label></td>
+          <td><a href="https://uhcougars.com" target="_blank" rel="noopener noreferrer">https://uhcougars.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-houston" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-north-texas">
+          <td><input type="checkbox" id="chk-university-of-north-texas" data-school-id="university-of-north-texas" aria-label="Verified University of North Texas" /></td>
+          <td><label for="chk-university-of-north-texas">University of North Texas</label></td>
+          <td><a href="https://meangreensports.com" target="_blank" rel="noopener noreferrer">https://meangreensports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-north-texas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas">
+          <td><input type="checkbox" id="chk-university-of-texas" data-school-id="university-of-texas" aria-label="Verified University of Texas" /></td>
+          <td><label for="chk-university-of-texas">University of Texas</label></td>
+          <td><a href="https://texassports.com" target="_blank" rel="noopener noreferrer">https://texassports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-at-arlington">
+          <td><input type="checkbox" id="chk-university-of-texas-at-arlington" data-school-id="university-of-texas-at-arlington" aria-label="Verified University of Texas at Arlington" /></td>
+          <td><label for="chk-university-of-texas-at-arlington">University of Texas at Arlington</label></td>
+          <td><a href="https://utamavs.com" target="_blank" rel="noopener noreferrer">https://utamavs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-at-arlington" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-at-el-paso">
+          <td><input type="checkbox" id="chk-university-of-texas-at-el-paso" data-school-id="university-of-texas-at-el-paso" aria-label="Verified University of Texas at El Paso" /></td>
+          <td><label for="chk-university-of-texas-at-el-paso">University of Texas at El Paso</label></td>
+          <td><a href="https://utepminers.com" target="_blank" rel="noopener noreferrer">https://utepminers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-at-el-paso" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-at-san-antonio">
+          <td><input type="checkbox" id="chk-university-of-texas-at-san-antonio" data-school-id="university-of-texas-at-san-antonio" aria-label="Verified University of Texas at San Antonio" /></td>
+          <td><label for="chk-university-of-texas-at-san-antonio">University of Texas at San Antonio</label></td>
+          <td><a href="https://goutsa.com" target="_blank" rel="noopener noreferrer">https://goutsa.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-at-san-antonio" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-the-incarnate-word">
+          <td><input type="checkbox" id="chk-university-of-the-incarnate-word" data-school-id="university-of-the-incarnate-word" aria-label="Verified University of the Incarnate Word" /></td>
+          <td><label for="chk-university-of-the-incarnate-word">University of the Incarnate Word</label></td>
+          <td><a href="https://uiwcardinals.com" target="_blank" rel="noopener noreferrer">https://uiwcardinals.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-the-incarnate-word" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr></tbody>
+      </table>
+    </section>
+    <section class="division">
+      <h2>D2 <span class="count" data-division="D2">0 / 11</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>OK</th>
+            <th>School</th>
+            <th>Athletics URL</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-school-id="angelo-state-university">
+          <td><input type="checkbox" id="chk-angelo-state-university" data-school-id="angelo-state-university" aria-label="Verified Angelo State University" /></td>
+          <td><label for="chk-angelo-state-university">Angelo State University</label></td>
+          <td><a href="https://angelosports.com" target="_blank" rel="noopener noreferrer">https://angelosports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="angelo-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="lubbock-christian-university">
+          <td><input type="checkbox" id="chk-lubbock-christian-university" data-school-id="lubbock-christian-university" aria-label="Verified Lubbock Christian University" /></td>
+          <td><label for="chk-lubbock-christian-university">Lubbock Christian University</label></td>
+          <td><a href="https://lcuchaps.com" target="_blank" rel="noopener noreferrer">https://lcuchaps.com</a></td>
+          <td><input type="text" class="notes" data-school-id="lubbock-christian-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="midwestern-state-university">
+          <td><input type="checkbox" id="chk-midwestern-state-university" data-school-id="midwestern-state-university" aria-label="Verified Midwestern State University" /></td>
+          <td><label for="chk-midwestern-state-university">Midwestern State University</label></td>
+          <td><a href="https://msumustangs.com" target="_blank" rel="noopener noreferrer">https://msumustangs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="midwestern-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="st-edward-s-university">
+          <td><input type="checkbox" id="chk-st-edward-s-university" data-school-id="st-edward-s-university" aria-label="Verified St. Edward's University" /></td>
+          <td><label for="chk-st-edward-s-university">St. Edward's University</label></td>
+          <td><a href="https://gohilltoppers.com" target="_blank" rel="noopener noreferrer">https://gohilltoppers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="st-edward-s-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="st-mary-s-university">
+          <td><input type="checkbox" id="chk-st-mary-s-university" data-school-id="st-mary-s-university" aria-label="Verified St. Mary's University" /></td>
+          <td><label for="chk-st-mary-s-university">St. Mary's University</label></td>
+          <td><a href="https://rattlerathletics.com" target="_blank" rel="noopener noreferrer">https://rattlerathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="st-mary-s-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-international-university">
+          <td><input type="checkbox" id="chk-texas-a-m-international-university" data-school-id="texas-a-m-international-university" aria-label="Verified Texas A&amp;M International University" /></td>
+          <td><label for="chk-texas-a-m-international-university">Texas A&amp;M International University</label></td>
+          <td><a href="https://godustdevils.com" target="_blank" rel="noopener noreferrer">https://godustdevils.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-international-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-university-kingsville">
+          <td><input type="checkbox" id="chk-texas-a-m-university-kingsville" data-school-id="texas-a-m-university-kingsville" aria-label="Verified Texas A&amp;M University-Kingsville" /></td>
+          <td><label for="chk-texas-a-m-university-kingsville">Texas A&amp;M University-Kingsville</label></td>
+          <td><a href="https://javelinaathletics.com" target="_blank" rel="noopener noreferrer">https://javelinaathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-university-kingsville" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-woman-s-university">
+          <td><input type="checkbox" id="chk-texas-woman-s-university" data-school-id="texas-woman-s-university" aria-label="Verified Texas Woman's University" /></td>
+          <td><label for="chk-texas-woman-s-university">Texas Woman's University</label></td>
+          <td><a href="https://twuathletics.com" target="_blank" rel="noopener noreferrer">https://twuathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-woman-s-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-at-tyler">
+          <td><input type="checkbox" id="chk-university-of-texas-at-tyler" data-school-id="university-of-texas-at-tyler" aria-label="Verified University of Texas at Tyler" /></td>
+          <td><label for="chk-university-of-texas-at-tyler">University of Texas at Tyler</label></td>
+          <td><a href="https://uttylerpatriots.com" target="_blank" rel="noopener noreferrer">https://uttylerpatriots.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-at-tyler" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-permian-basin">
+          <td><input type="checkbox" id="chk-university-of-texas-permian-basin" data-school-id="university-of-texas-permian-basin" aria-label="Verified University of Texas Permian Basin" /></td>
+          <td><label for="chk-university-of-texas-permian-basin">University of Texas Permian Basin</label></td>
+          <td><a href="https://utpbfalcons.com" target="_blank" rel="noopener noreferrer">https://utpbfalcons.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-permian-basin" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="west-texas-a-m-university">
+          <td><input type="checkbox" id="chk-west-texas-a-m-university" data-school-id="west-texas-a-m-university" aria-label="Verified West Texas A&amp;M University" /></td>
+          <td><label for="chk-west-texas-a-m-university">West Texas A&amp;M University</label></td>
+          <td><a href="https://gobuffsgo.com" target="_blank" rel="noopener noreferrer">https://gobuffsgo.com</a></td>
+          <td><input type="text" class="notes" data-school-id="west-texas-a-m-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr></tbody>
+      </table>
+    </section>
+    <section class="division">
+      <h2>D3 <span class="count" data-division="D3">0 / 16</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>OK</th>
+            <th>School</th>
+            <th>Athletics URL</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-school-id="austin-college">
+          <td><input type="checkbox" id="chk-austin-college" data-school-id="austin-college" aria-label="Verified Austin College" /></td>
+          <td><label for="chk-austin-college">Austin College</label></td>
+          <td><a href="https://acroos.com" target="_blank" rel="noopener noreferrer">https://acroos.com</a></td>
+          <td><input type="text" class="notes" data-school-id="austin-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="concordia-university-texas">
+          <td><input type="checkbox" id="chk-concordia-university-texas" data-school-id="concordia-university-texas" aria-label="Verified Concordia University Texas" /></td>
+          <td><label for="chk-concordia-university-texas">Concordia University Texas</label></td>
+          <td><a href="https://athletics.concordia.edu" target="_blank" rel="noopener noreferrer">https://athletics.concordia.edu</a></td>
+          <td><input type="text" class="notes" data-school-id="concordia-university-texas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="east-texas-baptist-university">
+          <td><input type="checkbox" id="chk-east-texas-baptist-university" data-school-id="east-texas-baptist-university" aria-label="Verified East Texas Baptist University" /></td>
+          <td><label for="chk-east-texas-baptist-university">East Texas Baptist University</label></td>
+          <td><a href="https://goetbutigers.com" target="_blank" rel="noopener noreferrer">https://goetbutigers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="east-texas-baptist-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="hardin-simmons-university">
+          <td><input type="checkbox" id="chk-hardin-simmons-university" data-school-id="hardin-simmons-university" aria-label="Verified Hardin-Simmons University" /></td>
+          <td><label for="chk-hardin-simmons-university">Hardin-Simmons University</label></td>
+          <td><a href="https://hsuathletics.com" target="_blank" rel="noopener noreferrer">https://hsuathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="hardin-simmons-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="howard-payne-university">
+          <td><input type="checkbox" id="chk-howard-payne-university" data-school-id="howard-payne-university" aria-label="Verified Howard Payne University" /></td>
+          <td><label for="chk-howard-payne-university">Howard Payne University</label></td>
+          <td><a href="https://hpusports.com" target="_blank" rel="noopener noreferrer">https://hpusports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="howard-payne-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="letourneau-university">
+          <td><input type="checkbox" id="chk-letourneau-university" data-school-id="letourneau-university" aria-label="Verified LeTourneau University" /></td>
+          <td><label for="chk-letourneau-university">LeTourneau University</label></td>
+          <td><a href="https://letuathletics.com" target="_blank" rel="noopener noreferrer">https://letuathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="letourneau-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="mcmurry-university">
+          <td><input type="checkbox" id="chk-mcmurry-university" data-school-id="mcmurry-university" aria-label="Verified McMurry University" /></td>
+          <td><label for="chk-mcmurry-university">McMurry University</label></td>
+          <td><a href="https://mcmurrysports.com" target="_blank" rel="noopener noreferrer">https://mcmurrysports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="mcmurry-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="schreiner-university">
+          <td><input type="checkbox" id="chk-schreiner-university" data-school-id="schreiner-university" aria-label="Verified Schreiner University" /></td>
+          <td><label for="chk-schreiner-university">Schreiner University</label></td>
+          <td><a href="https://schreinermountaineers.com" target="_blank" rel="noopener noreferrer">https://schreinermountaineers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="schreiner-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="southwestern-university">
+          <td><input type="checkbox" id="chk-southwestern-university" data-school-id="southwestern-university" aria-label="Verified Southwestern University" /></td>
+          <td><label for="chk-southwestern-university">Southwestern University</label></td>
+          <td><a href="https://southwesternpirates.com" target="_blank" rel="noopener noreferrer">https://southwesternpirates.com</a></td>
+          <td><input type="text" class="notes" data-school-id="southwestern-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="sul-ross-state-university">
+          <td><input type="checkbox" id="chk-sul-ross-state-university" data-school-id="sul-ross-state-university" aria-label="Verified Sul Ross State University" /></td>
+          <td><label for="chk-sul-ross-state-university">Sul Ross State University</label></td>
+          <td><a href="https://srlobos.com" target="_blank" rel="noopener noreferrer">https://srlobos.com</a></td>
+          <td><input type="text" class="notes" data-school-id="sul-ross-state-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-lutheran-university">
+          <td><input type="checkbox" id="chk-texas-lutheran-university" data-school-id="texas-lutheran-university" aria-label="Verified Texas Lutheran University" /></td>
+          <td><label for="chk-texas-lutheran-university">Texas Lutheran University</label></td>
+          <td><a href="https://tlubulldogs.com" target="_blank" rel="noopener noreferrer">https://tlubulldogs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-lutheran-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="trinity-university">
+          <td><input type="checkbox" id="chk-trinity-university" data-school-id="trinity-university" aria-label="Verified Trinity University" /></td>
+          <td><label for="chk-trinity-university">Trinity University</label></td>
+          <td><a href="https://trinitytigers.com" target="_blank" rel="noopener noreferrer">https://trinitytigers.com</a></td>
+          <td><input type="text" class="notes" data-school-id="trinity-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-dallas">
+          <td><input type="checkbox" id="chk-university-of-dallas" data-school-id="university-of-dallas" aria-label="Verified University of Dallas" /></td>
+          <td><label for="chk-university-of-dallas">University of Dallas</label></td>
+          <td><a href="https://udallasathletics.com" target="_blank" rel="noopener noreferrer">https://udallasathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-dallas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-mary-hardin-baylor">
+          <td><input type="checkbox" id="chk-university-of-mary-hardin-baylor" data-school-id="university-of-mary-hardin-baylor" aria-label="Verified University of Mary Hardin-Baylor" /></td>
+          <td><label for="chk-university-of-mary-hardin-baylor">University of Mary Hardin-Baylor</label></td>
+          <td><a href="https://cruathletics.com" target="_blank" rel="noopener noreferrer">https://cruathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-mary-hardin-baylor" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-st-thomas">
+          <td><input type="checkbox" id="chk-university-of-st-thomas" data-school-id="university-of-st-thomas" aria-label="Verified University of St. Thomas" /></td>
+          <td><label for="chk-university-of-st-thomas">University of St. Thomas</label></td>
+          <td><a href="https://ustcelts.com" target="_blank" rel="noopener noreferrer">https://ustcelts.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-st-thomas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-texas-at-dallas">
+          <td><input type="checkbox" id="chk-university-of-texas-at-dallas" data-school-id="university-of-texas-at-dallas" aria-label="Verified University of Texas at Dallas" /></td>
+          <td><label for="chk-university-of-texas-at-dallas">University of Texas at Dallas</label></td>
+          <td><a href="https://utdcomets.com" target="_blank" rel="noopener noreferrer">https://utdcomets.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-texas-at-dallas" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr></tbody>
+      </table>
+    </section>
+    <section class="division">
+      <h2>JUCO <span class="count" data-division="JUCO">0 / 33</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>OK</th>
+            <th>School</th>
+            <th>Athletics URL</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-school-id="alvin-community-college">
+          <td><input type="checkbox" id="chk-alvin-community-college" data-school-id="alvin-community-college" aria-label="Verified Alvin Community College" /></td>
+          <td><label for="chk-alvin-community-college">Alvin Community College</label></td>
+          <td><a href="https://athletics.alvincollege.edu" target="_blank" rel="noopener noreferrer">https://athletics.alvincollege.edu</a></td>
+          <td><input type="text" class="notes" data-school-id="alvin-community-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="angelina-college">
+          <td><input type="checkbox" id="chk-angelina-college" data-school-id="angelina-college" aria-label="Verified Angelina College" /></td>
+          <td><label for="chk-angelina-college">Angelina College</label></td>
+          <td><a href="https://angelinaathletics.com" target="_blank" rel="noopener noreferrer">https://angelinaathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="angelina-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="blinn-college">
+          <td><input type="checkbox" id="chk-blinn-college" data-school-id="blinn-college" aria-label="Verified Blinn College" /></td>
+          <td><label for="chk-blinn-college">Blinn College</label></td>
+          <td><a href="https://buccaneersports.com" target="_blank" rel="noopener noreferrer">https://buccaneersports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="blinn-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="cisco-college">
+          <td><input type="checkbox" id="chk-cisco-college" data-school-id="cisco-college" aria-label="Verified Cisco College" /></td>
+          <td><label for="chk-cisco-college">Cisco College</label></td>
+          <td><a href="https://www.wranglersports.net" target="_blank" rel="noopener noreferrer">https://www.wranglersports.net</a></td>
+          <td><input type="text" class="notes" data-school-id="cisco-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="clarendon-college">
+          <td><input type="checkbox" id="chk-clarendon-college" data-school-id="clarendon-college" aria-label="Verified Clarendon College" /></td>
+          <td><label for="chk-clarendon-college">Clarendon College</label></td>
+          <td><a href="https://clarendonbulldogs.com" target="_blank" rel="noopener noreferrer">https://clarendonbulldogs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="clarendon-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="coastal-bend-college">
+          <td><input type="checkbox" id="chk-coastal-bend-college" data-school-id="coastal-bend-college" aria-label="Verified Coastal Bend College" /></td>
+          <td><label for="chk-coastal-bend-college">Coastal Bend College</label></td>
+          <td><a href="https://cbcathletics.com" target="_blank" rel="noopener noreferrer">https://cbcathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="coastal-bend-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="dallas-college-brookhaven">
+          <td><input type="checkbox" id="chk-dallas-college-brookhaven" data-school-id="dallas-college-brookhaven" aria-label="Verified Dallas College Brookhaven" /></td>
+          <td><label for="chk-dallas-college-brookhaven">Dallas College Brookhaven</label></td>
+          <td><a href="https://brookhavenathletics.com" target="_blank" rel="noopener noreferrer">https://brookhavenathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="dallas-college-brookhaven" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="dallas-college-eastfield">
+          <td><input type="checkbox" id="chk-dallas-college-eastfield" data-school-id="dallas-college-eastfield" aria-label="Verified Dallas College Eastfield" /></td>
+          <td><label for="chk-dallas-college-eastfield">Dallas College Eastfield</label></td>
+          <td><a href="https://eastfieldathletics.com" target="_blank" rel="noopener noreferrer">https://eastfieldathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="dallas-college-eastfield" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="dallas-college-north-lake">
+          <td><input type="checkbox" id="chk-dallas-college-north-lake" data-school-id="dallas-college-north-lake" aria-label="Verified Dallas College North Lake" /></td>
+          <td><label for="chk-dallas-college-north-lake">Dallas College North Lake</label></td>
+          <td><a href="https://northlakecollegeathletics.com" target="_blank" rel="noopener noreferrer">https://northlakecollegeathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="dallas-college-north-lake" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="dallas-college-richland">
+          <td><input type="checkbox" id="chk-dallas-college-richland" data-school-id="dallas-college-richland" aria-label="Verified Dallas College Richland" /></td>
+          <td><label for="chk-dallas-college-richland">Dallas College Richland</label></td>
+          <td><a href="https://rlcsports.com" target="_blank" rel="noopener noreferrer">https://rlcsports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="dallas-college-richland" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="el-paso-community-college">
+          <td><input type="checkbox" id="chk-el-paso-community-college" data-school-id="el-paso-community-college" aria-label="Verified El Paso Community College" /></td>
+          <td><label for="chk-el-paso-community-college">El Paso Community College</label></td>
+          <td><a href="https://www.epcc.edu/Services/Athletics/softball" target="_blank" rel="noopener noreferrer">https://www.epcc.edu/Services/Athletics/softball</a></td>
+          <td><input type="text" class="notes" data-school-id="el-paso-community-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="frank-phillips-college">
+          <td><input type="checkbox" id="chk-frank-phillips-college" data-school-id="frank-phillips-college" aria-label="Verified Frank Phillips College" /></td>
+          <td><label for="chk-frank-phillips-college">Frank Phillips College</label></td>
+          <td><a href="https://plainsmensports.com" target="_blank" rel="noopener noreferrer">https://plainsmensports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="frank-phillips-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="galveston-college">
+          <td><input type="checkbox" id="chk-galveston-college" data-school-id="galveston-college" aria-label="Verified Galveston College" /></td>
+          <td><label for="chk-galveston-college">Galveston College</label></td>
+          <td><a href="https://www.gcwhitecaps.com" target="_blank" rel="noopener noreferrer">https://www.gcwhitecaps.com</a></td>
+          <td><input type="text" class="notes" data-school-id="galveston-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="grayson-college">
+          <td><input type="checkbox" id="chk-grayson-college" data-school-id="grayson-college" aria-label="Verified Grayson College" /></td>
+          <td><label for="chk-grayson-college">Grayson College</label></td>
+          <td><a href="https://www.gcvikings.com" target="_blank" rel="noopener noreferrer">https://www.gcvikings.com</a></td>
+          <td><input type="text" class="notes" data-school-id="grayson-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="hill-college">
+          <td><input type="checkbox" id="chk-hill-college" data-school-id="hill-college" aria-label="Verified Hill College" /></td>
+          <td><label for="chk-hill-college">Hill College</label></td>
+          <td><a href="https://hillcollegeathletics.com" target="_blank" rel="noopener noreferrer">https://hillcollegeathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="hill-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="howard-college">
+          <td><input type="checkbox" id="chk-howard-college" data-school-id="howard-college" aria-label="Verified Howard College" /></td>
+          <td><label for="chk-howard-college">Howard College</label></td>
+          <td><a href="https://www.hchawk.com" target="_blank" rel="noopener noreferrer">https://www.hchawk.com</a></td>
+          <td><input type="text" class="notes" data-school-id="howard-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="kilgore-college">
+          <td><input type="checkbox" id="chk-kilgore-college" data-school-id="kilgore-college" aria-label="Verified Kilgore College" /></td>
+          <td><label for="chk-kilgore-college">Kilgore College</label></td>
+          <td><a href="https://www.kcrangernation.com" target="_blank" rel="noopener noreferrer">https://www.kcrangernation.com</a></td>
+          <td><input type="text" class="notes" data-school-id="kilgore-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="mclennan-community-college">
+          <td><input type="checkbox" id="chk-mclennan-community-college" data-school-id="mclennan-community-college" aria-label="Verified McLennan Community College" /></td>
+          <td><label for="chk-mclennan-community-college">McLennan Community College</label></td>
+          <td><a href="https://mclennanathletics.com" target="_blank" rel="noopener noreferrer">https://mclennanathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="mclennan-community-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="midland-college">
+          <td><input type="checkbox" id="chk-midland-college" data-school-id="midland-college" aria-label="Verified Midland College" /></td>
+          <td><label for="chk-midland-college">Midland College</label></td>
+          <td><a href="https://gochaps.com" target="_blank" rel="noopener noreferrer">https://gochaps.com</a></td>
+          <td><input type="text" class="notes" data-school-id="midland-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="navarro-college">
+          <td><input type="checkbox" id="chk-navarro-college" data-school-id="navarro-college" aria-label="Verified Navarro College" /></td>
+          <td><label for="chk-navarro-college">Navarro College</label></td>
+          <td><a href="https://navarrobulldogs.com" target="_blank" rel="noopener noreferrer">https://navarrobulldogs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="navarro-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="north-central-texas-college">
+          <td><input type="checkbox" id="chk-north-central-texas-college" data-school-id="north-central-texas-college" aria-label="Verified North Central Texas College" /></td>
+          <td><label for="chk-north-central-texas-college">North Central Texas College</label></td>
+          <td><a href="https://nctcathletics.com" target="_blank" rel="noopener noreferrer">https://nctcathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="north-central-texas-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="northeast-texas-community-college">
+          <td><input type="checkbox" id="chk-northeast-texas-community-college" data-school-id="northeast-texas-community-college" aria-label="Verified Northeast Texas Community College" /></td>
+          <td><label for="chk-northeast-texas-community-college">Northeast Texas Community College</label></td>
+          <td><a href="https://ntcceagles.com" target="_blank" rel="noopener noreferrer">https://ntcceagles.com</a></td>
+          <td><input type="text" class="notes" data-school-id="northeast-texas-community-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="odessa-college">
+          <td><input type="checkbox" id="chk-odessa-college" data-school-id="odessa-college" aria-label="Verified Odessa College" /></td>
+          <td><label for="chk-odessa-college">Odessa College</label></td>
+          <td><a href="https://wranglersports.com" target="_blank" rel="noopener noreferrer">https://wranglersports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="odessa-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="paris-junior-college">
+          <td><input type="checkbox" id="chk-paris-junior-college" data-school-id="paris-junior-college" aria-label="Verified Paris Junior College" /></td>
+          <td><label for="chk-paris-junior-college">Paris Junior College</label></td>
+          <td><a href="https://pjcathletics.com" target="_blank" rel="noopener noreferrer">https://pjcathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="paris-junior-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="ranger-college">
+          <td><input type="checkbox" id="chk-ranger-college" data-school-id="ranger-college" aria-label="Verified Ranger College" /></td>
+          <td><label for="chk-ranger-college">Ranger College</label></td>
+          <td><a href="https://www.rangersports.net" target="_blank" rel="noopener noreferrer">https://www.rangersports.net</a></td>
+          <td><input type="text" class="notes" data-school-id="ranger-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="san-jacinto-college">
+          <td><input type="checkbox" id="chk-san-jacinto-college" data-school-id="san-jacinto-college" aria-label="Verified San Jacinto College" /></td>
+          <td><label for="chk-san-jacinto-college">San Jacinto College</label></td>
+          <td><a href="https://sanjacsports.com" target="_blank" rel="noopener noreferrer">https://sanjacsports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="san-jacinto-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="south-plains-college">
+          <td><input type="checkbox" id="chk-south-plains-college" data-school-id="south-plains-college" aria-label="Verified South Plains College" /></td>
+          <td><label for="chk-south-plains-college">South Plains College</label></td>
+          <td><a href="https://spctexans.com" target="_blank" rel="noopener noreferrer">https://spctexans.com</a></td>
+          <td><input type="text" class="notes" data-school-id="south-plains-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="temple-college">
+          <td><input type="checkbox" id="chk-temple-college" data-school-id="temple-college" aria-label="Verified Temple College" /></td>
+          <td><label for="chk-temple-college">Temple College</label></td>
+          <td><a href="https://www.tcleopards.com" target="_blank" rel="noopener noreferrer">https://www.tcleopards.com</a></td>
+          <td><input type="text" class="notes" data-school-id="temple-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="trinity-valley-community-college">
+          <td><input type="checkbox" id="chk-trinity-valley-community-college" data-school-id="trinity-valley-community-college" aria-label="Verified Trinity Valley Community College" /></td>
+          <td><label for="chk-trinity-valley-community-college">Trinity Valley Community College</label></td>
+          <td><a href="https://tvccsports.com" target="_blank" rel="noopener noreferrer">https://tvccsports.com</a></td>
+          <td><input type="text" class="notes" data-school-id="trinity-valley-community-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="tyler-junior-college">
+          <td><input type="checkbox" id="chk-tyler-junior-college" data-school-id="tyler-junior-college" aria-label="Verified Tyler Junior College" /></td>
+          <td><label for="chk-tyler-junior-college">Tyler Junior College</label></td>
+          <td><a href="https://apacheathletics.com" target="_blank" rel="noopener noreferrer">https://apacheathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="tyler-junior-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="vernon-college">
+          <td><input type="checkbox" id="chk-vernon-college" data-school-id="vernon-college" aria-label="Verified Vernon College" /></td>
+          <td><label for="chk-vernon-college">Vernon College</label></td>
+          <td><a href="https://www.vernoncollege.edu/athletics" target="_blank" rel="noopener noreferrer">https://www.vernoncollege.edu/athletics</a></td>
+          <td><input type="text" class="notes" data-school-id="vernon-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="weatherford-college">
+          <td><input type="checkbox" id="chk-weatherford-college" data-school-id="weatherford-college" aria-label="Verified Weatherford College" /></td>
+          <td><label for="chk-weatherford-college">Weatherford College</label></td>
+          <td><a href="https://wcathletics.com" target="_blank" rel="noopener noreferrer">https://wcathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="weatherford-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="western-texas-college">
+          <td><input type="checkbox" id="chk-western-texas-college" data-school-id="western-texas-college" aria-label="Verified Western Texas College" /></td>
+          <td><label for="chk-western-texas-college">Western Texas College</label></td>
+          <td><a href="https://www.wtcathletics.com" target="_blank" rel="noopener noreferrer">https://www.wtcathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="western-texas-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr></tbody>
+      </table>
+    </section>
+    <section class="division">
+      <h2>NAIA <span class="count" data-division="NAIA">0 / 9</span></h2>
+      <table>
+        <thead>
+          <tr>
+            <th>OK</th>
+            <th>School</th>
+            <th>Athletics URL</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr data-school-id="jarvis-christian-university">
+          <td><input type="checkbox" id="chk-jarvis-christian-university" data-school-id="jarvis-christian-university" aria-label="Verified Jarvis Christian University" /></td>
+          <td><label for="chk-jarvis-christian-university">Jarvis Christian University</label></td>
+          <td><a href="https://jcubulldogs.com" target="_blank" rel="noopener noreferrer">https://jcubulldogs.com</a></td>
+          <td><input type="text" class="notes" data-school-id="jarvis-christian-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="nelson-university">
+          <td><input type="checkbox" id="chk-nelson-university" data-school-id="nelson-university" aria-label="Verified Nelson University" /></td>
+          <td><label for="chk-nelson-university">Nelson University</label></td>
+          <td><a href="https://nelsonlions.com" target="_blank" rel="noopener noreferrer">https://nelsonlions.com</a></td>
+          <td><input type="text" class="notes" data-school-id="nelson-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="our-lady-of-the-lake-university">
+          <td><input type="checkbox" id="chk-our-lady-of-the-lake-university" data-school-id="our-lady-of-the-lake-university" aria-label="Verified Our Lady of the Lake University" /></td>
+          <td><label for="chk-our-lady-of-the-lake-university">Our Lady of the Lake University</label></td>
+          <td><a href="https://ollusaintsathletics.com" target="_blank" rel="noopener noreferrer">https://ollusaintsathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="our-lady-of-the-lake-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-a-m-university-texarkana">
+          <td><input type="checkbox" id="chk-texas-a-m-university-texarkana" data-school-id="texas-a-m-university-texarkana" aria-label="Verified Texas A&amp;M University-Texarkana" /></td>
+          <td><label for="chk-texas-a-m-university-texarkana">Texas A&amp;M University-Texarkana</label></td>
+          <td><a href="https://tamuteagles.com" target="_blank" rel="noopener noreferrer">https://tamuteagles.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-a-m-university-texarkana" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-college">
+          <td><input type="checkbox" id="chk-texas-college" data-school-id="texas-college" aria-label="Verified Texas College" /></td>
+          <td><label for="chk-texas-college">Texas College</label></td>
+          <td><a href="https://www.tcsteersathletics.com" target="_blank" rel="noopener noreferrer">https://www.tcsteersathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-college" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="texas-wesleyan-university">
+          <td><input type="checkbox" id="chk-texas-wesleyan-university" data-school-id="texas-wesleyan-university" aria-label="Verified Texas Wesleyan University" /></td>
+          <td><label for="chk-texas-wesleyan-university">Texas Wesleyan University</label></td>
+          <td><a href="https://ramsports.net/sports/softball" target="_blank" rel="noopener noreferrer">https://ramsports.net/sports/softball</a></td>
+          <td><input type="text" class="notes" data-school-id="texas-wesleyan-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-houston-victoria">
+          <td><input type="checkbox" id="chk-university-of-houston-victoria" data-school-id="university-of-houston-victoria" aria-label="Verified University of Houston-Victoria" /></td>
+          <td><label for="chk-university-of-houston-victoria">University of Houston-Victoria</label></td>
+          <td><a href="https://uhvjaguars.com" target="_blank" rel="noopener noreferrer">https://uhvjaguars.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-houston-victoria" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="university-of-the-southwest">
+          <td><input type="checkbox" id="chk-university-of-the-southwest" data-school-id="university-of-the-southwest" aria-label="Verified University of the Southwest" /></td>
+          <td><label for="chk-university-of-the-southwest">University of the Southwest</label></td>
+          <td><a href="https://uswathletics.com" target="_blank" rel="noopener noreferrer">https://uswathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="university-of-the-southwest" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr>
+        <tr data-school-id="wayland-baptist-university">
+          <td><input type="checkbox" id="chk-wayland-baptist-university" data-school-id="wayland-baptist-university" aria-label="Verified Wayland Baptist University" /></td>
+          <td><label for="chk-wayland-baptist-university">Wayland Baptist University</label></td>
+          <td><a href="https://wbuathletics.com" target="_blank" rel="noopener noreferrer">https://wbuathletics.com</a></td>
+          <td><input type="text" class="notes" data-school-id="wayland-baptist-university" placeholder="Notes (wrong URL, no softball, etc.)" /></td>
+        </tr></tbody>
+      </table>
+    </section>
+  <script>
+    const STORAGE_KEY = "recruithelper-tx-url-verification-v1";
+
+    function loadState() {
+      try {
+        return JSON.parse(localStorage.getItem(STORAGE_KEY) || "{}");
+      } catch {
+        return {};
+      }
+    }
+
+    function saveState(state) {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    }
+
+    function updateCounts() {
+      const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+      const total = document.querySelectorAll('input[type="checkbox"]').length;
+      document.getElementById("total-progress").textContent = checked + " / " + total;
+
+      document.querySelectorAll("section.division").forEach((section) => {
+        const boxes = section.querySelectorAll('input[type="checkbox"]');
+        const done = section.querySelectorAll('input[type="checkbox"]:checked').length;
+        const countEl = section.querySelector(".count");
+        if (countEl) countEl.textContent = done + " / " + boxes.length;
+      });
+    }
+
+    function applyState(state) {
+      document.querySelectorAll('input[type="checkbox"]').forEach((box) => {
+        const id = box.dataset.schoolId;
+        box.checked = Boolean(state[id]?.checked);
+        const row = box.closest("tr");
+        if (row) row.classList.toggle("verified", box.checked);
+      });
+      document.querySelectorAll("input.notes").forEach((input) => {
+        const id = input.dataset.schoolId;
+        input.value = state[id]?.notes || "";
+      });
+      updateCounts();
+    }
+
+    function persist() {
+      const state = loadState();
+      document.querySelectorAll('input[type="checkbox"]').forEach((box) => {
+        const id = box.dataset.schoolId;
+        state[id] = { ...(state[id] || {}), checked: box.checked };
+      });
+      document.querySelectorAll("input.notes").forEach((input) => {
+        const id = input.dataset.schoolId;
+        state[id] = { ...(state[id] || {}), notes: input.value };
+      });
+      saveState(state);
+      updateCounts();
+    }
+
+    document.querySelectorAll('input[type="checkbox"]').forEach((box) => {
+      box.addEventListener("change", () => {
+        const row = box.closest("tr");
+        if (row) row.classList.toggle("verified", box.checked);
+        persist();
+      });
+    });
+
+    document.querySelectorAll("input.notes").forEach((input) => {
+      input.addEventListener("input", persist);
+    });
+
+    document.getElementById("reset-progress").addEventListener("click", () => {
+      if (!confirm("Clear all checkboxes and notes?")) return;
+      localStorage.removeItem(STORAGE_KEY);
+      applyState({});
+    });
+
+    document.getElementById("export-notes").addEventListener("click", async () => {
+      const lines = [];
+      document.querySelectorAll("tbody tr").forEach((row) => {
+        const name = row.querySelector("label")?.textContent?.trim();
+        const url = row.querySelector("a")?.href;
+        const checked = row.querySelector('input[type="checkbox"]')?.checked;
+        const notes = row.querySelector("input.notes")?.value?.trim();
+        if (!checked && !notes) return;
+        lines.push((checked ? "[OK] " : "[TODO] ") + name + " | " + url + (notes ? " | " + notes : ""));
+      });
+      const text = lines.join("\n") || "No verified schools or notes yet.";
+      await navigator.clipboard.writeText(text);
+      alert("Copied " + lines.length + " line(s) to clipboard.");
+    });
+
+    applyState(loadState());
+  </script>
+</body>
+</html>

@@ -1,0 +1,315 @@
+[
+  {
+    "name": "Alvin College",
+    "priorVerdict": "FAIL",
+    "url": "https://alvincollege.edu/athletics",
+    "finalUrl": "https://athletics.alvincollege.edu/landing/index",
+    "status": 200,
+    "score": 25,
+    "softball": true,
+    "platform": "PrestoSports",
+    "staffLinks": [
+      "https://athletics.alvincollege.edu/sports/sball/2025-26/roster",
+      "https://athletics.alvincollege.edu/sports/sball/coaches/index"
+    ],
+    "emails": [],
+    "htmlLen": 274520,
+    "verdict": "GOOD"
+  },
+  {
+    "name": "Angelina College",
+    "priorVerdict": "CHECK",
+    "url": "https://angelinaathletics.com",
+    "finalUrl": "https://angelinaathletics.com/landing/index",
+    "status": 202,
+    "score": 22,
+    "softball": true,
+    "platform": "PrestoSports",
+    "staffLinks": [
+      "https://angelinaathletics.com/sports/sball/2025-26/roster"
+    ],
+    "emails": [],
+    "htmlLen": 149708,
+    "verdict": "GOOD"
+  },
+  {
+    "name": "Cisco College",
+    "priorVerdict": "FAIL",
+    "url": "https://ciscoathletics.com",
+    "error": "page.goto: net::ERR_CERT_DATE_INVALID at https://ciscoathletics.com/\nCall log:\n  - navigating to \"https://ciscoathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Clarendon College",
+    "priorVerdict": "CHECK",
+    "url": "https://clarendonbulldogs.com",
+    "finalUrl": "https://clarendonbulldogs.com/landing/index",
+    "status": 202,
+    "score": 14,
+    "softball": false,
+    "platform": "PrestoSports",
+    "staffLinks": [],
+    "emails": [],
+    "htmlLen": 3908,
+    "verdict": "LIKELY"
+  },
+  {
+    "name": "Coastal Bend College",
+    "priorVerdict": "CHECK",
+    "url": "https://cbcathletics.com",
+    "finalUrl": "https://cbcathletics.com/landing/index",
+    "status": 202,
+    "score": 19,
+    "softball": true,
+    "platform": "PrestoSports",
+    "staffLinks": [],
+    "emails": [],
+    "htmlLen": 182852,
+    "verdict": "GOOD"
+  },
+  {
+    "name": "Dallas College Brookhaven",
+    "priorVerdict": "FAIL",
+    "url": "https://www.brookhavenbears.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.brookhavenbears.com/\nCall log:\n  - navigating to \"https://www.brookhavenbears.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Dallas College Eastfield",
+    "priorVerdict": "FAIL",
+    "url": "https://www.eastfieldbees.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.eastfieldbees.com/\nCall log:\n  - navigating to \"https://www.eastfieldbees.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Dallas College North Lake",
+    "priorVerdict": "FAIL",
+    "url": "https://www.nlcblazers.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://www.nlcblazers.com/\nCall log:\n  - navigating to \"https://www.nlcblazers.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Dallas College Richland",
+    "priorVerdict": "FAIL",
+    "url": "https://richlandthunderducks.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://richlandthunderducks.com/\nCall log:\n  - navigating to \"https://richlandthunderducks.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "El Paso Community College",
+    "priorVerdict": "FAIL",
+    "url": "https://epcc.edu/Athletics",
+    "error": "page.goto: net::ERR_CERT_COMMON_NAME_INVALID at https://epcc.edu/Athletics\nCall log:\n  - navigating to \"https://epcc.edu/Athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Frank Phillips College",
+    "priorVerdict": "FAIL",
+    "url": "https://fpclainsports.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://fpclainsports.com/\nCall log:\n  - navigating to \"https://fpclainsports.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Galveston College",
+    "priorVerdict": "FAIL",
+    "url": "https://whitecapsports.com",
+    "finalUrl": "https://www.whitecapsports.com/",
+    "status": 200,
+    "score": 12,
+    "softball": false,
+    "platform": "Other",
+    "staffLinks": [],
+    "emails": [
+      "madison@whitecapsports.com"
+    ],
+    "htmlLen": 529762,
+    "verdict": "LIKELY"
+  },
+  {
+    "name": "Grayson College",
+    "priorVerdict": "FAIL",
+    "url": "https://grayson.edu/athletics",
+    "finalUrl": "https://www.grayson.edu/athletics/",
+    "status": 403,
+    "score": 0,
+    "softball": false,
+    "platform": "College main site",
+    "staffLinks": [],
+    "emails": [],
+    "htmlLen": 1201,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Hill College",
+    "priorVerdict": "FAIL",
+    "url": "https://hillcollege.edu/athletics",
+    "error": "page.goto: Navigation to \"https://hillcollege.edu/athletics\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://hillcollege.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Howard College",
+    "priorVerdict": "FAIL",
+    "url": "https://hchawkssports.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://hchawkssports.com/\nCall log:\n  - navigating to \"https://hchawkssports.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Kilgore College",
+    "priorVerdict": "CHECK",
+    "url": "https://kilgore.edu/athletics",
+    "error": "page.goto: Navigation to \"https://kilgore.edu/athletics\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://kilgore.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Laredo College",
+    "priorVerdict": "FAIL",
+    "url": "https://laredo.edu/athletics",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://laredo.edu/athletics\nCall log:\n  - navigating to \"https://laredo.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "McLennan Community College",
+    "priorVerdict": "CHECK",
+    "url": "https://mclennanathletics.com",
+    "error": "page.goto: Navigation to \"https://mclennanathletics.com/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://mclennanathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Midland College",
+    "priorVerdict": "CHECK",
+    "url": "https://gochaps.com",
+    "error": "page.goto: Navigation to \"https://gochaps.com/\" is interrupted by another navigation to \"https://mclennanathletics.com/\"\nCall log:\n  - navigating to \"https://gochaps.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Navarro College",
+    "priorVerdict": "FAIL",
+    "url": "https://navarroathletics.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://navarroathletics.com/\nCall log:\n  - navigating to \"https://navarroathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "North Central Texas College",
+    "priorVerdict": "CHECK",
+    "url": "https://nctcathletics.com",
+    "error": "page.goto: Navigation to \"https://nctcathletics.com/\" is interrupted by another navigation to \"https://navarrobulldogs.com/\"\nCall log:\n  - navigating to \"https://nctcathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Odessa College",
+    "priorVerdict": "CHECK",
+    "url": "https://wranglersports.com",
+    "error": "page.content: Unable to retrieve content because the page is navigating and changing the content.",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Paris Junior College",
+    "priorVerdict": "FAIL",
+    "url": "https://pjc.edu/athletics",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://pjc.edu/athletics\nCall log:\n  - navigating to \"https://pjc.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Ranger College",
+    "priorVerdict": "FAIL",
+    "url": "https://rangercollegeathletics.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://rangercollegeathletics.com/\nCall log:\n  - navigating to \"https://rangercollegeathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "South Plains College",
+    "priorVerdict": "CHECK",
+    "url": "https://spctexans.com",
+    "error": "page.goto: Navigation to \"https://spctexans.com/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://spctexans.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Southwest Texas Junior College",
+    "priorVerdict": "FAIL",
+    "url": "https://swtjc.edu/athletics",
+    "error": "page.goto: net::ERR_CONNECTION_TIMED_OUT at https://swtjc.edu/athletics\nCall log:\n  - navigating to \"https://swtjc.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Texarkana College",
+    "priorVerdict": "FAIL",
+    "url": "https://texarkanacollege.edu/athletics",
+    "error": "page.goto: Navigation to \"https://texarkanacollege.edu/athletics\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://texarkanacollege.edu/athletics\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Trinity Valley Community College",
+    "priorVerdict": "CHECK",
+    "url": "https://tvccsports.com",
+    "finalUrl": "https://tvccsports.com/landing/index",
+    "status": 202,
+    "score": 22,
+    "softball": true,
+    "platform": "PrestoSports",
+    "staffLinks": [
+      "https://tvccsports.com/sports/sball/2025-26/roster"
+    ],
+    "emails": [],
+    "htmlLen": 140977,
+    "verdict": "GOOD"
+  },
+  {
+    "name": "Tyler Junior College",
+    "priorVerdict": "CHECK",
+    "url": "https://apacheathletics.com",
+    "error": "page.content: Unable to retrieve content because the page is navigating and changing the content.",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Vernon College",
+    "priorVerdict": "CHECK",
+    "url": "https://vernoncollege.edu/athletics",
+    "finalUrl": "https://www.vernoncollege.edu/athletics",
+    "status": 200,
+    "score": 10,
+    "softball": false,
+    "platform": "College main site",
+    "staffLinks": [],
+    "emails": [],
+    "htmlLen": 618283,
+    "verdict": "LIKELY"
+  },
+  {
+    "name": "Weatherford College",
+    "priorVerdict": "CHECK",
+    "url": "https://wcathletics.com",
+    "error": "page.goto: Navigation to \"https://wcathletics.com/\" is interrupted by another navigation to \"chrome-error://chromewebdata/\"\nCall log:\n  - navigating to \"https://wcathletics.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  },
+  {
+    "name": "Western Texas College",
+    "priorVerdict": "FAIL",
+    "url": "https://wtccoyotes.com",
+    "error": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://wtccoyotes.com/\nCall log:\n  - navigating to \"https://wtccoyotes.com/\", waiting until \"domcontentloaded\"\n",
+    "score": -1,
+    "verdict": "FAIL"
+  }
+]

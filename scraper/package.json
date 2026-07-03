@@ -1,0 +1,26 @@
+{
+  "name": "@recruitconnect/scraper",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "scrape": "tsx src/cli.ts",
+    "scrape:all": "tsx src/cli.ts --all",
+    "scrape:tx": "tsx src/cli.ts --all --state TX",
+    "scrape:tx-juco": "tsx src/cli.ts --all --state TX --division JUCO"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1",
+    "playwright": "^1.49.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "@types/pg": "^8.11.10",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
+  }
+}

@@ -1,0 +1,96 @@
+.home {
+  max-width: 680px;
+  margin: 0 auto;
+  padding-top: 2rem;
+}
+
+.home__hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  animation: fadeInUp 0.5s ease both;
+}
+
+.home__hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  color: var(--color-text-inverse);
+}
+
+.home__tagline {
+  margin: 0 auto;
+  max-width: 32rem;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  color: rgba(248, 250, 252, 0.72);
+}
+
+.home__panel {
+  padding: 1.5rem;
+  background: rgba(255, 255, 255, 0.97);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  animation: fadeInUp 0.5s ease 0.1s both;
+}
+
+.home__results {
+  margin-top: 1.5rem;
+}
+
+.home__count {
+  margin: 0 0 0.875rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.home__count--popular {
+  color: var(--color-text);
+}
+
+.home__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.home__message {
+  padding: 1.25rem;
+  text-align: center;
+  border-radius: var(--radius-md);
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}
+
+.home__message--error {
+  background: #fef2f2;
+  color: var(--color-error);
+}
+
+.home__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 2.5rem 1rem;
+  text-align: center;
+}
+
+.home__empty-icon {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.home__empty p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 0.9375rem;
+}

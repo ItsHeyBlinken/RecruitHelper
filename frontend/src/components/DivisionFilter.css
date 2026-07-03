@@ -1,0 +1,33 @@
+.division-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.division-filter__chip {
+  padding: 0.45rem 0.875rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface-muted);
+  color: var(--color-text-muted);
+  font-family: var(--font);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background var(--transition),
+    border-color var(--transition),
+    color var(--transition);
+}
+
+.division-filter__chip:hover {
+  border-color: var(--color-primary);
+  color: var(--color-text);
+}
+
+.division-filter__chip--active {
+  background: var(--color-primary-soft);
+  border-color: rgba(232, 93, 38, 0.35);
+  color: var(--color-primary-dark);
+}
