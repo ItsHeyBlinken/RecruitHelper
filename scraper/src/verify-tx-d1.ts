@@ -75,7 +75,7 @@ async function verifySchool(
     row.staffPageUrl = result.staff_page_url;
     row.contacts = result.contacts.length;
     row.emails = result.contacts.filter((c) => c.email).length;
-    row.coachNames = result.contacts.map((c) => c.name).filter(Boolean).slice(0, 5);
+    row.coachNames = result.contacts.map((c) => c.coach_name).filter(Boolean).slice(0, 5);
 
     if (row.contacts === 0) {
       row.status = "FAIL";

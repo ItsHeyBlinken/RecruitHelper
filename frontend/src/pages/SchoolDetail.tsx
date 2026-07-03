@@ -80,6 +80,8 @@ export default function SchoolDetail() {
     );
   }
 
+  const reachableContacts = contacts.filter((contact) => contact.email?.trim());
+
   return (
     <Layout>
       <div className="school-detail">
@@ -114,20 +116,23 @@ export default function SchoolDetail() {
         <section className="school-detail__contacts">
           <div className="school-detail__section-header">
             <h2>Softball Coaching Staff</h2>
-            {contacts.length > 0 && (
+            {reachableContacts.length > 0 && (
               <span className="school-detail__count">
-                {contacts.length} {contacts.length === 1 ? "coach" : "coaches"}
+                {reachableContacts.length}{" "}
+                {reachableContacts.length === 1 ? "coach" : "coaches"}
               </span>
             )}
           </div>
 
-          {contacts.length === 0 ? (
+          {reachableContacts.length === 0 ? (
             <div className="school-detail__message">
-              No contacts available yet. Run the scraper to populate this school.
+              {contacts.length > 0
+                ? "No coach emails listed for this program yet."
+                : "No contacts available yet. Run the scraper to populate this school."}
             </div>
           ) : (
             <div className="school-detail__grid">
-              {contacts.map((contact, index) => (
+              {reachableContacts.map((contact, index) => (
                 <div key={contact.id} style={{ animationDelay: `${index * 50}ms` }}>
                   <ContactCard contact={contact} />
                 </div>
