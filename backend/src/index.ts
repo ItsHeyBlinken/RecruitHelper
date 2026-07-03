@@ -1,4 +1,5 @@
 import dotenv from "dotenv";
+import { existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import express from "express";
@@ -11,25 +12,51 @@ dotenv.config({ path: resolve(__dirname, "../../.env") });
 
 const app = express();
 const PORT = Number(process.env.PORT) || 3001;
+const isProduction = process.env.NODE_ENV === "production";
+const frontendDist = resolve(__dirname, "../../frontend/dist");
 
 app.use(cors());
 app.use(express.json());
 
-app.get("/health", async (_req, res) => {
+async function healthHandler(
+  _req: express.Request,
+  res: express.Response,
+): Promise<void> {
   try {
     await getPool().query("SELECT 1");
     res.json({ status: "ok", database: "connected" });
   } catch {
     res.status(503).json({ status: "error", database: "disconnected" });
   }
-});
+}
+
+app.get("/health", healthHandler);
+app.get("/api/health", healthHandler);
 
 app.use("/schools", schoolsRouter);
+app.use("/api/schools", schoolsRouter);
 
-app.use((_req, res) => {
+if (isProduction && existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+
+  app.get(/^(?!\/api\/).*/, (_req, res) => {
+    res.sendFile(resolve(frontendDist, "index.html"));
+  });
+}
+
+app.use("/api", (_req, res) => {
   res.status(404).json({ error: "Not found" });
 });
 
+if (!isProduction) {
+  app.use((_req, res) => {
+    res.status(404).json({ error: "Not found" });
+  });
+}
+
 app.listen(PORT, () => {
-  console.log(`RecruitConnect API listening on http://localhost:${PORT}`);
+  console.log(`RecruitConnect listening on http://localhost:${PORT}`);
+  if (isProduction && existsSync(frontendDist)) {
+    console.log(`Serving frontend from ${frontendDist}`);
+  }
 });
