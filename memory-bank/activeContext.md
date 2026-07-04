@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Phase
-**Session paused 2026-07-03 (night).** Regional expansion in progress. TX done. AR/LA JUCO+NAIA scraped. **Next session: Oklahoma JUCO/NAIA.**
+**Session ended 2026-07-03 (night).** Team beta live. TX + AR/LA JUCO/NAIA in. Templates refined. **Next session: Oklahoma JUCO/NAIA.**
 
 ## Regional roadmap
 1. **TX** — done (90 programs, all divisions; contacts cleaned)
@@ -80,4 +80,5 @@ Home page stays **Texas-first** (popular programs); AR/LA/OK via search + divisi
 - 2026-07-03: Team beta shared (158 programs / 90 TX at share time)
 - 2026-07-03: Regional expansion AR/LA JUCO+NAIA — 17 schools (`docs/ar-la/athletic-websites.md`, `db/022`, seed 175); BPCC coaches URL; scrape **17/17 success**, 25 contacts, 19 emails (~12 min); `npm run scrape:ar-la`; CLI comma-separated `--state` / `--division`
 - 2026-07-03: **Session pin** — AR/LA JUCO+NAIA complete; **next session: Oklahoma JUCO/NAIA**
-- 2026-07-03: Templates refined per `recruiting_email_improvements.md` — metric subjects, early personalization, bullet stats, Hudl/YouTube + profile links, CC coach, ID-camp ask, showcase jersey #/color, timing tips
+- 2026-07-03: Templates refined per `recruiting_email_improvements.md` — metric subjects, early personalization, bullet stats, Hudl/YouTube + profile links, CC coach, ID-camp ask (kept wording), showcase jersey #/color, timing tips
+- 2026-07-03: **Session end** — deploy templates when ready; **next session: Oklahoma JUCO/NAIA**
