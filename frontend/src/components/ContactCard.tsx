@@ -1,3 +1,4 @@
+import { useState } from "react";
 import type { Contact } from "../types";
 import { formatContactTitle } from "../utils/formatContactTitle";
 import "./ContactCard.css";
@@ -6,8 +7,27 @@ interface ContactCardProps {
   contact: Contact;
 }
 
+async function copyText(text: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 export default function ContactCard({ contact }: ContactCardProps) {
   const title = formatContactTitle(contact.title, contact.coach_name);
+  const email = contact.email?.trim() ?? "";
+  const [copied, setCopied] = useState(false);
+
+  async function handleCopyEmail() {
+    if (!email) return;
+    const ok = await copyText(email);
+    if (!ok) return;
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1600);
+  }
 
   return (
     <article className="contact-card">
@@ -16,13 +36,25 @@ export default function ContactCard({ contact }: ContactCardProps) {
         {title && <p className="contact-card__title">{title}</p>}
       </div>
       <div className="contact-card__details">
-        <a href={`mailto:${contact.email}`} className="contact-card__link">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
-            <rect width="20" height="16" x="2" y="4" rx="2" />
-            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-          </svg>
-          {contact.email}
-        </a>
+        {email ? (
+          <>
+            <p className="contact-card__email">{email}</p>
+            <div className="contact-card__actions">
+              <button
+                type="button"
+                className="contact-card__button"
+                onClick={handleCopyEmail}
+              >
+                {copied ? "Copied" : "Copy email address"}
+              </button>
+              <a href={`mailto:${email}`} className="contact-card__button contact-card__button--secondary">
+                Open in email app
+              </a>
+            </div>
+          </>
+        ) : (
+          <p className="contact-card__empty">No email listed</p>
+        )}
       </div>
     </article>
   );
