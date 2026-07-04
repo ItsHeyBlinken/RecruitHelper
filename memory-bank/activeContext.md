@@ -1,21 +1,23 @@
 # Active Context
 
 ## Current Phase
-**Regional expansion.** TX covered. Adding AR/LA JUCO+NAIA next; then OK JUCO+NAIA. Smaller schools first, then up by division in each region.
+**Session paused 2026-07-03 (night).** Regional expansion in progress. TX done. AR/LA JUCO+NAIA scraped. **Next session: Oklahoma JUCO/NAIA.**
 
 ## Regional roadmap
-1. **TX** — done (90 programs, all divisions)
-2. **AR/LA JUCO + NAIA** — seed + `db/022` ready (17 schools); apply SQL then `npm run scrape:ar-la`
-3. **OK JUCO + NAIA** — next after AR/LA scrape/verify
-4. Later: D3 → D2 → D1 in those regions (still smaller-first within region)
+1. **TX** — done (90 programs, all divisions; contacts cleaned)
+2. **AR/LA JUCO + NAIA** — done (17 schools seeded + scraped)
+3. **OK JUCO + NAIA** — **NEXT SESSION** (same pattern: doc → seed → SQL → scrape)
+4. Later: D3 → D2 → D1 in those regions (smaller schools first within region)
 
 Home page stays **Texas-first** (popular programs); AR/LA/OK via search + division filters.
 
-## Pinned / next actions
-1. User applies `db/022_add_ar_la_juco_naia_schools.sql` in pgAdmin
-2. Run `npm run scrape:ar-la` (or `npm run seed` then scrape)
-3. Spot-check contacts; fix bad URLs in `docs/ar-la/athletic-websites.md` as needed
-4. Then plan OK JUCO/NAIA list
+## Next session: Oklahoma JUCO/NAIA
+1. Research OK NJCAA + NAIA varsity softball programs and athletics URLs
+2. Add `docs/ok/athletic-websites.md` (or `docs/ok/`)
+3. Append to `seed/schools.json` + `db/023_add_ok_juco_naia_schools.sql`
+4. User applies SQL in pgAdmin
+5. Add `npm run scrape:ok` (or `--state OK --division JUCO,NAIA`) and run scrape
+6. Spot-check contacts / fix bad URLs
 
 ## Key Decisions
 - TypeScript across all packages
@@ -64,9 +66,7 @@ Home page stays **Texas-first** (popular programs); AR/LA/OK via search + divisi
 - 2026-07-03: Root cleanup — moved Texas verification docs to `docs/texas/`; root now config-only; `scripts/texas-doc-paths.mjs` centralizes doc paths
 - 2026-07-03: Overnight TX bulk scrape — 90/90 schools, 188 contacts, 158 emails; verification: A&M-Commerce inflated (29), 9 TX zero-contact, ~30 coaches missing email
 - 2026-07-03: Fixed Commerce inflation — `/sports/softball/staff` routed through staff-directory softball section parser; verified 1 coach (Rodney DeLong) after re-scrape
-- 2026-07-03: **Session pin** — TX scrape 90/90 complete; Commerce fixed; verification paused; resume zero-contact + missing-email triage tomorrow
 - 2026-07-03: Automated crawl of all 21 TX D1 athletics URLs (`scraper/src/verify-tx-d1.ts`) — 18 PASS, 3 WARN (partial emails), 0 FAIL; all doc URLs match seed; every site has discoverable softball coach contacts
-- 2026-07-03: Wrote `Texas_D1_Softball_URL_Verification.md` at project root for manual verification checklist
 - 2026-07-02: NJCAA URL crawl — verified 36 TX JUCO sites; wrote `NJCAA_URL_Verification_Findings.md` at repo root for manual sign-off
 - 2026-07-03: Crawled all 15 NCAA D3 TX athletics URLs — 12 confirmed PASS, 3 need URL updates (mcmurryads→mcmurrysports.com, schreinerathletics→schreinermountaineers.com, hputx.edu/athletics→hpusports.com), ETBU redirect OK (goetbutigers.com), U Dallas PARTIAL (staff-directory, sparse coach emails); added `scripts/verify-d3-tx-urls.mjs`; wrote `Texas_D3_Athletics_URL_Verification.md` for manual sign-off
 - 2026-07-02: Crawled all 12 NCAA D2 TX athletics URLs — 11/12 GOOD; fixed UTPB `utpbbasinguns.com` → `utpbfalcons.com`; results in `docs/d2-url-verification-results.json`; `db/017_fix_utpb_athletics_url.sql`
@@ -75,7 +75,9 @@ Home page stays **Texas-first** (popular programs); AR/LA/OK via search + divisi
 - 2026-07-03: Consolidated all 5 division URL verification reports into `Texas_Softball_URL_Verification_Master.md` — single actionable checklist for 93 TX schools (21 URL fixes, 3 removals, scrape workflow)
 - 2026-07-03: Fixed UT bogus `tickets@athletics.utexas.edu` on all coaches — added `scraper/src/generic-email.ts` blocklist; scraper now returns null email when only site-wide addresses found; current UT staff do not publish individual emails on texassports.com
 - 2026-07-03: Coolify deploy fix — added `nixpacks.toml` start command; backend serves `frontend/dist` in production with `/api/schools` routes (single Node container, no nginx static wrapper)
-- 2026-07-03: Contact data cleanup — `db/019_cleanup_jumbled_contacts.sql` deletes news/Sentry/institution-dup rows, renames institution-as-name coaches from email, fixes `hunter@unt.eduhttps`; scraper rejects institution/news names, Sentry emails, glued `https` suffixes; program emails (`softball@`) kept
-- 2026-07-03: `db/020_cleanup_remaining_jumbled_names.sql` — Vann Stuedeman fix, username→initials (Shippy/Tarr/Glasoe), Sam Houston program label, delete Texas State Athletics placeholder
-- 2026-07-03: Email templates tab — `/templates` with best practices + Intro / Follow-up / Camp copy-paste templates; nav links Schools + Templates
-- 2026-07-03: Regional expansion AR/LA JUCO+NAIA — 17 schools in seed + `db/022`; docs in `docs/ar-la/athletic-websites.md`; `npm run scrape:ar-la`; CLI supports comma-separated `--state` / `--division`
+- 2026-07-03: Contact data cleanup — `db/019`–`021` jumbled names, Texas State staff manual add; program emails kept; phones de-emphasized in UI
+- 2026-07-03: Email templates tab — `/templates` (intro, follow-up, camp, showcase) + best practices; Copy email on contact cards; mobile-friendly UI pass
+- 2026-07-03: Team beta shared (158 programs / 90 TX at share time)
+- 2026-07-03: Regional expansion AR/LA JUCO+NAIA — 17 schools (`docs/ar-la/athletic-websites.md`, `db/022`, seed 175); BPCC coaches URL; scrape **17/17 success**, 25 contacts, 19 emails (~12 min); `npm run scrape:ar-la`; CLI comma-separated `--state` / `--division`
+- 2026-07-03: **Session pin** — AR/LA JUCO+NAIA complete; **next session: Oklahoma JUCO/NAIA**
+- 2026-07-03: Templates refined per `recruiting_email_improvements.md` — metric subjects, early personalization, bullet stats, Hudl/YouTube + profile links, CC coach, ID-camp ask, showcase jersey #/color, timing tips
