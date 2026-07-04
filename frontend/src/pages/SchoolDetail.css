@@ -140,17 +140,44 @@
 }
 
 @media (max-width: 560px) {
+  .school-detail {
+    padding-top: 1rem;
+  }
+
+  .school-detail__back {
+    min-height: 2.5rem;
+    padding: 0.35rem 0;
+  }
+
   .school-detail__hero {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 1.15rem;
+    gap: 0.875rem;
   }
 
   .school-detail__meta {
     justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .school-detail__contacts {
+    padding: 1.15rem;
+  }
+
+  .school-detail__section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .school-detail__section-header h2 {
+    font-size: 1.125rem;
   }
 
   .school-detail__grid {
     grid-template-columns: 1fr;
   }
 }
+

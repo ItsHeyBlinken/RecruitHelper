@@ -35,14 +35,25 @@
 
 .contact-card__link {
   display: inline-flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 0.5rem;
+  min-height: 2.5rem;
+  padding: 0.35rem 0;
   color: var(--color-accent);
   text-decoration: none;
   font-size: 0.875rem;
-  word-break: break-all;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  -webkit-tap-highlight-color: transparent;
   transition: color var(--transition);
 }
+
+.contact-card__link svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
 
 .contact-card__link:hover {
   color: var(--color-primary);

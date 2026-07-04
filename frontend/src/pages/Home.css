@@ -2,7 +2,24 @@
   max-width: 680px;
   margin: 0 auto;
   padding-top: 2rem;
+  width: 100%;
 }
+
+@media (max-width: 480px) {
+  .home {
+    padding-top: 1.25rem;
+  }
+
+  .home__panel {
+    padding: 1.15rem;
+  }
+
+  .home__tagline {
+    font-size: 0.9375rem;
+    padding: 0 0.15rem;
+  }
+}
+
 
 .home__hero {
   text-align: center;
