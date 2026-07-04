@@ -74,3 +74,5 @@
 - 2026-07-03: Consolidated all 5 division URL verification reports into `Texas_Softball_URL_Verification_Master.md` — single actionable checklist for 93 TX schools (21 URL fixes, 3 removals, scrape workflow)
 - 2026-07-03: Fixed UT bogus `tickets@athletics.utexas.edu` on all coaches — added `scraper/src/generic-email.ts` blocklist; scraper now returns null email when only site-wide addresses found; current UT staff do not publish individual emails on texassports.com
 - 2026-07-03: Coolify deploy fix — added `nixpacks.toml` start command; backend serves `frontend/dist` in production with `/api/schools` routes (single Node container, no nginx static wrapper)
+- 2026-07-03: Contact data cleanup — `db/019_cleanup_jumbled_contacts.sql` deletes news/Sentry/institution-dup rows, renames institution-as-name coaches from email, fixes `hunter@unt.eduhttps`; scraper rejects institution/news names, Sentry emails, glued `https` suffixes; program emails (`softball@`) kept
+- 2026-07-03: `db/020_cleanup_remaining_jumbled_names.sql` — Vann Stuedeman fix, username→initials (Shippy/Tarr/Glasoe), Sam Houston program label, delete Texas State Athletics placeholder

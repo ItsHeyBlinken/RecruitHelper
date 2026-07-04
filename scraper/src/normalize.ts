@@ -66,6 +66,32 @@ function isLikelyTitle(text: string): boolean {
   );
 }
 
+function isInstitutionOrOrgName(text: string): boolean {
+  const lower = text.toLowerCase();
+  if (/\bathletics\b/.test(lower)) return true;
+  if (/\buniversity\b/.test(lower) || /\bcollege\b/.test(lower)) return true;
+  if (/^msu athletics$/i.test(text.trim())) return true;
+  return false;
+}
+
+function isNewsOrGarbageName(text: string): boolean {
+  const lower = text.toLowerCase();
+  if (/adds .+ to coaching/.test(lower)) return true;
+  if (/^the .+ file$/.test(lower)) return true;
+  if (/war and peace/.test(lower)) return true;
+  if (/program accolades/.test(lower)) return true;
+  if (/welcome |tabs |signs /.test(lower)) return true;
+  if (/shatters attendance|attendance records/.test(lower)) return true;
+  // Handle-like scrape artifacts: "Jacksonjb8", "Vshippy", "Htarr"
+  if (/^[a-z]+\d+$/i.test(text.trim())) return true;
+  if (/^[A-Z][a-z]+$/.test(text.trim()) && text.trim().length <= 10) {
+    // Single camel/token names are usually login handles, not people
+    return true;
+  }
+  if (/^softball$/i.test(text.trim())) return true;
+  return false;
+}
+
 function isLikelyName(text: string): boolean {
   if (!text || text.length < 3 || text.length > 80) return false;
   if (text.includes("@")) return false;
@@ -73,20 +99,37 @@ function isLikelyName(text: string): boolean {
   if (/^open\s/i.test(text)) return false;
   if (/^to be announced$/i.test(text.trim())) return false;
   if (/^\d+$/.test(text)) return false;
+  if (isInstitutionOrOrgName(text)) return false;
+  if (isNewsOrGarbageName(text)) return false;
   const words = text.trim().split(/\s+/);
   return words.length >= 2 && words.length <= 5;
+}
+
+function sanitizeEmailCandidate(raw: string): string {
+  // Strip URL fragments glued onto emails (e.g. hunter@unt.eduhttps)
+  return raw.replace(/https?$/i, "").replace(/\/+$/, "").trim();
+}
+
+function isPlausibleEmail(email: string): boolean {
+  if (!/^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$/i.test(email)) return false;
+  if (/https?/i.test(email)) return false;
+  const tld = email.split(".").pop() ?? "";
+  if (tld.length > 24) return false;
+  return true;
 }
 
 export function cleanEmail(raw: string | null): string | null {
   if (!raw) return null;
 
-  const candidates = raw.match(EMAIL_REGEX);
+  const sanitized = sanitizeEmailCandidate(raw);
+  const candidates = sanitized.match(EMAIL_REGEX);
   if (!candidates || candidates.length === 0) return null;
 
   const scored = candidates.map((email) => {
-    const [local] = email.split("@");
+    const cleaned = sanitizeEmailCandidate(email).toLowerCase();
+    const [local] = cleaned.split("@");
     let score = 0;
-    if (!local) return { email, score: -100 };
+    if (!local || !isPlausibleEmail(cleaned)) return { email: cleaned, score: -100 };
 
     if (PHONE_REGEX.test(local)) score -= 50;
     if (GARBAGE_EMAIL_PREFIX.test(local)) score -= 30;
@@ -95,18 +138,29 @@ export function cleanEmail(raw: string | null): string | null {
     if (local.length <= 12) score += 5;
     if (/^[a-z][a-z0-9._-]+$/i.test(local)) score += 10;
 
-    return { email: email.toLowerCase(), score };
+    return { email: cleaned, score };
   });
 
   scored.sort((a, b) => b.score - a.score);
-  const best = scored.find((entry) => !isGenericAthleticsEmail(entry.email)) ?? scored[0];
-  if (!best || best.score < -40) {
-    const buried = raw.match(/([a-z][a-z0-9]{2,24}@(?:[a-z0-9-]+\.)+[a-z]{2,})$/i);
-    const buriedEmail = buried ? buried[1].toLowerCase() : null;
-    return isGenericAthleticsEmail(buriedEmail) ? null : buriedEmail;
+  const best =
+    scored.find((entry) => !isGenericAthleticsEmail(entry.email) && entry.score >= -40) ?? null;
+  if (!best) {
+    const buried = sanitized.match(/([a-z][a-z0-9._%+-]*@(?:[a-z0-9-]+\.)+[a-z]{2,24})$/i);
+    const buriedEmail = buried ? sanitizeEmailCandidate(buried[1]).toLowerCase() : null;
+    if (!buriedEmail || !isPlausibleEmail(buriedEmail) || isGenericAthleticsEmail(buriedEmail)) {
+      return null;
+    }
+    return buriedEmail;
   }
 
-  return isGenericAthleticsEmail(best.email) ? null : best.email;
+  return best.email;
+}
+
+function isPlausiblePhone(phone: string | null): boolean {
+  if (!phone) return false;
+  if (/^\(0\d{2}\)/.test(phone)) return false;
+  if (phone === "(000) 000-0000") return false;
+  return true;
 }
 
 function escapeRegExp(value: string): string {
@@ -221,16 +275,19 @@ function mergeDuplicates(contacts: ScrapedContact[]): ScrapedContact[] {
   return merged.sort((a, b) => a.coach_name.localeCompare(b.coach_name));
 }
 
-export function normalizeContact(contact: ScrapedContact): ScrapedContact {
-  const email = cleanEmail(contact.email);
+export function normalizeContact(contact: ScrapedContact): ScrapedContact | null {
   const coachName = truncate(normalizeWhitespace(contact.coach_name));
+  if (!isLikelyName(coachName)) return null;
+
+  const email = cleanEmail(contact.email);
   const title = cleanTitle(contact.title, coachName);
+  const phone = normalizePhone(contact.phone);
 
   return {
     coach_name: coachName,
     title: title ? truncate(title) : null,
     email,
-    phone: normalizePhone(contact.phone),
+    phone: isPlausiblePhone(phone) ? phone : null,
   };
 }
 
@@ -280,7 +337,9 @@ function mergeByCoachName(contacts: ScrapedContact[]): ScrapedContact[] {
 }
 
 export function normalizeContacts(contacts: ScrapedContact[]): ScrapedContact[] {
-  const cleaned = contacts.map(normalizeContact);
+  const cleaned = contacts
+    .map(normalizeContact)
+    .filter((contact): contact is ScrapedContact => contact !== null);
   const byEmail = mergeDuplicates(cleaned);
   const merged = mergeByCoachName(byEmail);
   return filterSoftballCoachingContacts(merged);

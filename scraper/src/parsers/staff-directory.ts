@@ -44,6 +44,9 @@ function isLikelyName(text: string): boolean {
   ) {
     return false;
   }
+  if (/\b(university|college|athletics)\b/i.test(lower)) return false;
+  if (/adds .+ to coaching|program accolades|war and peace/i.test(lower)) return false;
+  if (/^[a-z]+\d+$/i.test(normalized)) return false;
 
   const words = normalized.trim().split(/\s+/);
   return words.length >= 2 && words.length <= 4;

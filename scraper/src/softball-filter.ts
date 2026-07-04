@@ -33,6 +33,8 @@ const ADMIN_TITLE_MARKERS = [
   "compliance",
   "sports information",
   "communications director",
+  "for communications",
+  "communications (",
   "facilities",
   "marketing",
   "development",
