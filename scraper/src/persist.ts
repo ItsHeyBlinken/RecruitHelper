@@ -148,6 +148,15 @@ export async function getSchoolByName(name: string): Promise<SeedSchool & { id: 
   return result.rows[0] ?? null;
 }
 
+function parseListFilter(value: string | undefined): string[] | null {
+  if (!value) return null;
+  const parts = value
+    .split(",")
+    .map((part) => part.trim().toUpperCase())
+    .filter(Boolean);
+  return parts.length > 0 ? parts : null;
+}
+
 export async function getAllSchools(filters?: {
   state?: string;
   division?: string;
@@ -156,14 +165,22 @@ export async function getAllSchools(filters?: {
   const conditions: string[] = [];
   const params: string[] = [];
 
-  if (filters?.state) {
-    params.push(filters.state.toUpperCase());
-    conditions.push(`UPPER(state) = $${params.length}`);
+  const states = parseListFilter(filters?.state);
+  if (states) {
+    const placeholders = states.map((state) => {
+      params.push(state);
+      return `$${params.length}`;
+    });
+    conditions.push(`UPPER(state) IN (${placeholders.join(", ")})`);
   }
 
-  if (filters?.division) {
-    params.push(filters.division.toUpperCase());
-    conditions.push(`UPPER(division) = $${params.length}`);
+  const divisions = parseListFilter(filters?.division);
+  if (divisions) {
+    const placeholders = divisions.map((division) => {
+      params.push(division);
+      return `$${params.length}`;
+    });
+    conditions.push(`UPPER(division) IN (${placeholders.join(", ")})`);
   }
 
   const where = conditions.length > 0 ? `WHERE ${conditions.join(" AND ")}` : "";

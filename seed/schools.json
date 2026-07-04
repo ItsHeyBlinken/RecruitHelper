@@ -1887,5 +1887,216 @@
     "division": "NAIA",
     "state": "TX",
     "athletics_url": "https://wbuathletics.com"
+  },
+  {
+    "school_name": "Arkansas State University Mid-South",
+    "abbreviation": "ASU Mid-South",
+    "aliases": [
+      "ASU Mid-South",
+      "Mid-South",
+      "Greyhounds"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://www.asumidsouthsports.com"
+  },
+  {
+    "school_name": "Arkansas State University Mountain Home",
+    "abbreviation": "ASUMH",
+    "aliases": [
+      "ASUMH",
+      "ASU Mountain Home",
+      "Mountain Home",
+      "TrailBlazers"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://www.asumhathletics.com"
+  },
+  {
+    "school_name": "Arkansas State University Three Rivers",
+    "abbreviation": "ASUTR",
+    "aliases": [
+      "ASUTR",
+      "ASU Three Rivers",
+      "Three Rivers",
+      "Kickers"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://www.asutr.edu/o/athletics"
+  },
+  {
+    "school_name": "National Park College",
+    "abbreviation": "NPC",
+    "aliases": [
+      "NPC",
+      "National Park",
+      "Nighthawks"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://np.edu/student-life-services/athletics/softball/"
+  },
+  {
+    "school_name": "North Arkansas College",
+    "abbreviation": "Northark",
+    "aliases": [
+      "Northark",
+      "North Arkansas",
+      "Pioneers"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://www.northark.edu/athletics/softball/"
+  },
+  {
+    "school_name": "Southeast Arkansas College",
+    "abbreviation": "SEARK",
+    "aliases": [
+      "SEARK",
+      "Southeast Arkansas",
+      "Sharks"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://searksharks.com"
+  },
+  {
+    "school_name": "Southern Arkansas University Tech",
+    "abbreviation": "SAU Tech",
+    "aliases": [
+      "SAU Tech",
+      "Southern Arkansas Tech",
+      "Rockets"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://sautrockets.com"
+  },
+  {
+    "school_name": "University of Arkansas Rich Mountain",
+    "abbreviation": "UA Rich Mountain",
+    "aliases": [
+      "UA Rich Mountain",
+      "UARM",
+      "Rich Mountain",
+      "Bucks"
+    ],
+    "division": "JUCO",
+    "state": "AR",
+    "athletics_url": "https://bucksathletics.com"
+  },
+  {
+    "school_name": "Central Baptist College",
+    "abbreviation": "CBC",
+    "aliases": [
+      "CBC",
+      "Central Baptist",
+      "Mustangs"
+    ],
+    "division": "NAIA",
+    "state": "AR",
+    "athletics_url": "https://cbcmustangs.com"
+  },
+  {
+    "school_name": "Crowley's Ridge College",
+    "abbreviation": "CRC",
+    "aliases": [
+      "CRC",
+      "Crowley's Ridge",
+      "Pioneers"
+    ],
+    "division": "NAIA",
+    "state": "AR",
+    "athletics_url": "https://www.crcpioneers.com"
+  },
+  {
+    "school_name": "Williams Baptist University",
+    "abbreviation": "WBU",
+    "aliases": [
+      "WBU",
+      "Williams Baptist",
+      "Eagles"
+    ],
+    "division": "NAIA",
+    "state": "AR",
+    "athletics_url": "https://wbueagles.com"
+  },
+  {
+    "school_name": "Baton Rouge Community College",
+    "abbreviation": "BRCC",
+    "aliases": [
+      "BRCC",
+      "Baton Rouge CC",
+      "Bears",
+      "Lady Bears"
+    ],
+    "division": "JUCO",
+    "state": "LA",
+    "athletics_url": "https://brccathletics.com"
+  },
+  {
+    "school_name": "Bossier Parish Community College",
+    "abbreviation": "BPCC",
+    "aliases": [
+      "BPCC",
+      "Bossier Parish",
+      "Cavaliers",
+      "Lady Cavaliers"
+    ],
+    "division": "JUCO",
+    "state": "LA",
+    "athletics_url": "https://bpcc.prestosports.com/sports/sball/coaches/index"
+  },
+  {
+    "school_name": "Louisiana State University Eunice",
+    "abbreviation": "LSUE",
+    "aliases": [
+      "LSUE",
+      "LSU Eunice",
+      "Lady Bengals"
+    ],
+    "division": "JUCO",
+    "state": "LA",
+    "athletics_url": "https://athletics.lsue.edu"
+  },
+  {
+    "school_name": "Louisiana Christian University",
+    "abbreviation": "LCU",
+    "aliases": [
+      "LCU",
+      "Louisiana Christian",
+      "Wildcats"
+    ],
+    "division": "NAIA",
+    "state": "LA",
+    "athletics_url": "https://www.lcwildcats.net"
+  },
+  {
+    "school_name": "Louisiana State University at Alexandria",
+    "abbreviation": "LSUA",
+    "aliases": [
+      "LSUA",
+      "LSU Alexandria",
+      "LSU-A",
+      "Generals"
+    ],
+    "division": "NAIA",
+    "state": "LA",
+    "athletics_url": "https://lsuagenerals.com"
+  },
+  {
+    "school_name": "Xavier University of Louisiana",
+    "abbreviation": "XULA",
+    "aliases": [
+      "XULA",
+      "Xavier Louisiana",
+      "Xavier",
+      "Gold Rush"
+    ],
+    "division": "NAIA",
+    "state": "LA",
+    "athletics_url": "https://xulagold.com"
   }
 ]

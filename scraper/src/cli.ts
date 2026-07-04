@@ -78,15 +78,26 @@ function toSeedSchool(school: SeedSchool): SeedSchool {
   };
 }
 
+function parseListFilter(value: string | undefined): string[] | null {
+  if (!value) return null;
+  return value
+    .split(",")
+    .map((part) => part.trim().toUpperCase())
+    .filter(Boolean);
+}
+
 function filterSeedSchools(
   schools: SeedSchool[],
   filters: { state?: string; division?: string },
 ): SeedSchool[] {
+  const states = parseListFilter(filters.state);
+  const divisions = parseListFilter(filters.division);
+
   return schools.filter((school) => {
-    if (filters.state && school.state.toUpperCase() !== filters.state.toUpperCase()) {
+    if (states && !states.includes(school.state.toUpperCase())) {
       return false;
     }
-    if (filters.division && school.division.toUpperCase() !== filters.division.toUpperCase()) {
+    if (divisions && !divisions.includes(school.division.toUpperCase())) {
       return false;
     }
     return true;
@@ -255,8 +266,8 @@ Usage:
 Options:
   --school <name>       Scrape a single school by name
   --all                 Scrape all matching schools (DB first, then seed file)
-  --state <code>        Filter bulk scrape by state (e.g. TX)
-  --division <div>      Filter bulk scrape by division (D1, D2, D3, JUCO, NAIA)
+  --state <code>        Filter bulk scrape by state (e.g. TX or AR,LA)
+  --division <div>      Filter by division (D1, D2, D3, JUCO, NAIA; comma-separated OK)
   --concurrency <n>     Schools to scrape in parallel (default: 2)
   --dry-run             Parse only, do not persist (not yet implemented)
 

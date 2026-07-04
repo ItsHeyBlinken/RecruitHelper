@@ -18,6 +18,7 @@
     "scrape:all": "tsx scraper/src/cli.ts --all",
     "scrape:tx": "tsx scraper/src/cli.ts --all --state TX",
     "scrape:tx-juco": "tsx scraper/src/cli.ts --all --state TX --division JUCO",
+    "scrape:ar-la": "tsx scraper/src/cli.ts --all --state AR,LA --division JUCO,NAIA",
     "seed": "tsx scraper/src/seed-schools.ts",
     "texas:url-checklist": "node scripts/generate-texas-url-checklist.mjs",
     "texas:apply-verification": "node scripts/apply-texas-verification-master.mjs"

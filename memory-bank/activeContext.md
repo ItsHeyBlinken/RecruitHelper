@@ -1,21 +1,21 @@
 # Active Context
 
 ## Current Phase
-**Pinned 2026-07-03 (night session).** TX bulk scrape done. Verification in progress. Commerce fix confirmed.
+**Regional expansion.** TX covered. Adding AR/LA JUCO+NAIA next; then OK JUCO+NAIA. Smaller schools first, then up by division in each region.
 
-## Pinned for Tomorrow
-1. **Zero-contact TX schools (9)** — Dallas ×4, Jarvis Christian, EPCC, Paris JC, South Plains, Vernon
-2. **Missing emails (~30 coaches)** — queries in `docs/texas/email-verification-queries.md`; delete garbage rows (`Open ${lastName}`, `To Be Announced`) if still present
-3. **Non-TX zero-contact (21)** — expected; scrape when expanding beyond Texas
-4. **Commit ready** — URL sync (`db/011`–`018`), root cleanup (`docs/texas/`), Commerce scraper fix (uncommitted)
+## Regional roadmap
+1. **TX** — done (90 programs, all divisions)
+2. **AR/LA JUCO + NAIA** — seed + `db/022` ready (17 schools); apply SQL then `npm run scrape:ar-la`
+3. **OK JUCO + NAIA** — next after AR/LA scrape/verify
+4. Later: D3 → D2 → D1 in those regions (still smaller-first within region)
 
-## In Progress
-- None (session paused)
+Home page stays **Texas-first** (popular programs); AR/LA/OK via search + division filters.
 
-## Next Up
-- Resume verification on zero-contact + missing-email lists
-- Optional: Playwright re-scrape for Jarvis, Austin College, Dallas campuses
-- User commits when ready
+## Pinned / next actions
+1. User applies `db/022_add_ar_la_juco_naia_schools.sql` in pgAdmin
+2. Run `npm run scrape:ar-la` (or `npm run seed` then scrape)
+3. Spot-check contacts; fix bad URLs in `docs/ar-la/athletic-websites.md` as needed
+4. Then plan OK JUCO/NAIA list
 
 ## Key Decisions
 - TypeScript across all packages
@@ -23,6 +23,7 @@
 - User applies SQL migrations manually in pgAdmin
 - User handles all git commits
 - Texas-first home page — popular programs and stats highlight TX; nationwide schools retained in DB
+- Expand regionally: JUCO/NAIA first, then higher divisions
 
 ## Session Log
 - 2026-07-02: Initialized RecruitConnect monorepo per MVP foundation plan
@@ -77,3 +78,4 @@
 - 2026-07-03: Contact data cleanup — `db/019_cleanup_jumbled_contacts.sql` deletes news/Sentry/institution-dup rows, renames institution-as-name coaches from email, fixes `hunter@unt.eduhttps`; scraper rejects institution/news names, Sentry emails, glued `https` suffixes; program emails (`softball@`) kept
 - 2026-07-03: `db/020_cleanup_remaining_jumbled_names.sql` — Vann Stuedeman fix, username→initials (Shippy/Tarr/Glasoe), Sam Houston program label, delete Texas State Athletics placeholder
 - 2026-07-03: Email templates tab — `/templates` with best practices + Intro / Follow-up / Camp copy-paste templates; nav links Schools + Templates
+- 2026-07-03: Regional expansion AR/LA JUCO+NAIA — 17 schools in seed + `db/022`; docs in `docs/ar-la/athletic-websites.md`; `npm run scrape:ar-la`; CLI supports comma-separated `--state` / `--division`
