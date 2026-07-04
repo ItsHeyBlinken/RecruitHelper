@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Layout.css";
 
 interface LayoutProps {
@@ -16,7 +16,25 @@ export default function Layout({ children }: LayoutProps) {
           </span>
           <span className="layout__name">RecruitConnect</span>
         </Link>
-        <span className="layout__badge">NCAA Softball</span>
+        <nav className="layout__nav" aria-label="Main">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              isActive ? "layout__nav-link layout__nav-link--active" : "layout__nav-link"
+            }
+          >
+            Schools
+          </NavLink>
+          <NavLink
+            to="/templates"
+            className={({ isActive }) =>
+              isActive ? "layout__nav-link layout__nav-link--active" : "layout__nav-link"
+            }
+          >
+            Templates
+          </NavLink>
+        </nav>
       </header>
       <main className="layout__main">{children}</main>
     </div>

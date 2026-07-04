@@ -54,16 +54,35 @@
   letter-spacing: -0.02em;
 }
 
-.layout__badge {
-  padding: 0.35rem 0.75rem;
+.layout__nav {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.layout__nav-link {
+  padding: 0.4rem 0.85rem;
   border-radius: var(--radius-full);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: rgba(248, 250, 252, 0.85);
-  font-size: 0.75rem;
+  color: rgba(248, 250, 252, 0.75);
+  font-size: 0.875rem;
   font-weight: 600;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
+  text-decoration: none;
+  transition: background var(--transition), color var(--transition);
+}
+
+.layout__nav-link:hover {
+  color: var(--color-text-inverse);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.layout__nav-link--active {
+  color: #fff;
+  background: rgba(232, 93, 38, 0.9);
+}
+
+.layout__nav-link--active:hover {
+  color: #fff;
+  background: rgba(232, 93, 38, 1);
 }
 
 .layout__main {
@@ -77,7 +96,8 @@
     font-size: 1rem;
   }
 
-  .layout__badge {
-    display: none;
+  .layout__nav-link {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.8125rem;
   }
 }
