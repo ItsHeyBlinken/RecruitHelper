@@ -1,7 +1,7 @@
 # Active Context
 
 ## Current Phase
-**Session ended 2026-07-03 (night).** Team beta live. TX + AR/LA JUCO/NAIA in. Templates refined. **Next session: Oklahoma JUCO/NAIA.**
+**Session ended 2026-07-09 (night).** Email prefix cleanup complete (023–027). Team beta in use — kid flagged OK State bad email, led to broad `coach`/`coordinator` fusion fix. **Next session: Oklahoma JUCO/NAIA** (or deploy latest scraper before bulk re-scrape).
 
 ## Regional roadmap
 1. **TX** — done (90 programs, all divisions; contacts cleaned)
@@ -85,3 +85,4 @@ Home page stays **Texas-first** (popular programs); AR/LA/OK via search + divisi
 - 2026-07-09: Fixed fused role-prefix emails (`coachkenny.g`, `coordinatorvshippy`) — `scraper/src/email-repair.ts` + `db/023_fix_fused_role_email_prefixes.sql`; keeps legitimate `coach@` school conventions (Duke, Purdue, etc.)
 - 2026-07-09: OK State coach sync from [okstate.com/sports/softball/coaches](https://okstate.com/sports/softball/coaches) — `db/024_sync_okstate_softball_coaches.sql` (4 coaching staff)
 - 2026-07-09: Broadened coach-prefix fix — strip ALL fused `coach` on .edu (incl. `coachsoftball@` → `softball@`); `db/025`; Duke `db/026`; IU sync `db/027` from [iuhoosiers.com/sports/softball/roster](https://iuhoosiers.com/sports/softball/roster)
+- 2026-07-09: **Session end** — email cleanup verified on OK State, SFA, Duke, IU; discovered via kid using beta; deploy scraper before bulk re-scrape; **next: OK JUCO/NAIA**
