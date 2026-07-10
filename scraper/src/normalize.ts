@@ -1,6 +1,7 @@
 import type { ScrapedContact } from "./types.js";
 import { filterSoftballCoachingContacts } from "./softball-filter.js";
 import { isGenericAthleticsEmail } from "./generic-email.js";
+import { repairFusedRoleEmailPrefix } from "./email-repair.js";
 
 const EMAIL_REGEX = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 const PHONE_REGEX = /(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}/g;
@@ -126,7 +127,7 @@ export function cleanEmail(raw: string | null): string | null {
   if (!candidates || candidates.length === 0) return null;
 
   const scored = candidates.map((email) => {
-    const cleaned = sanitizeEmailCandidate(email).toLowerCase();
+    const cleaned = repairFusedRoleEmailPrefix(sanitizeEmailCandidate(email).toLowerCase());
     const [local] = cleaned.split("@");
     let score = 0;
     if (!local || !isPlausibleEmail(cleaned)) return { email: cleaned, score: -100 };
@@ -146,14 +147,16 @@ export function cleanEmail(raw: string | null): string | null {
     scored.find((entry) => !isGenericAthleticsEmail(entry.email) && entry.score >= -40) ?? null;
   if (!best) {
     const buried = sanitized.match(/([a-z][a-z0-9._%+-]*@(?:[a-z0-9-]+\.)+[a-z]{2,24})$/i);
-    const buriedEmail = buried ? sanitizeEmailCandidate(buried[1]).toLowerCase() : null;
+    const buriedEmail = buried
+      ? repairFusedRoleEmailPrefix(sanitizeEmailCandidate(buried[1]).toLowerCase())
+      : null;
     if (!buriedEmail || !isPlausibleEmail(buriedEmail) || isGenericAthleticsEmail(buriedEmail)) {
       return null;
     }
     return buriedEmail;
   }
 
-  return best.email;
+  return repairFusedRoleEmailPrefix(best.email);
 }
 
 function isPlausiblePhone(phone: string | null): boolean {

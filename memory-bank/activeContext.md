@@ -82,3 +82,6 @@ Home page stays **Texas-first** (popular programs); AR/LA/OK via search + divisi
 - 2026-07-03: **Session pin** — AR/LA JUCO+NAIA complete; **next session: Oklahoma JUCO/NAIA**
 - 2026-07-03: Templates refined per `recruiting_email_improvements.md` — metric subjects, early personalization, bullet stats, Hudl/YouTube + profile links, CC coach, ID-camp ask (kept wording), showcase jersey #/color, timing tips
 - 2026-07-03: **Session end** — deploy templates when ready; **next session: Oklahoma JUCO/NAIA**
+- 2026-07-09: Fixed fused role-prefix emails (`coachkenny.g`, `coordinatorvshippy`) — `scraper/src/email-repair.ts` + `db/023_fix_fused_role_email_prefixes.sql`; keeps legitimate `coach@` school conventions (Duke, Purdue, etc.)
+- 2026-07-09: OK State coach sync from [okstate.com/sports/softball/coaches](https://okstate.com/sports/softball/coaches) — `db/024_sync_okstate_softball_coaches.sql` (4 coaching staff)
+- 2026-07-09: Broadened coach-prefix fix — strip ALL fused `coach` on .edu (incl. `coachsoftball@` → `softball@`); `db/025`; Duke `db/026`; IU sync `db/027` from [iuhoosiers.com/sports/softball/roster](https://iuhoosiers.com/sports/softball/roster)
